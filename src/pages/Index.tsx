@@ -66,7 +66,7 @@ const Index = () => {
           </div>
 
           <section id="about" className="mt-10 grid md:grid-cols-12 gap-8 items-center">
-            <div className="order-2 md:order-1 md:col-span-7">
+            <div className="order-1 md:order-1 md:col-span-7">
               <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-fade-in">
                 Ujala Jha
               </h1>
@@ -106,7 +106,7 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div className="order-1 md:order-2 md:col-span-5">
+            <div className="order-2 md:order-2 md:col-span-5">
               <Card className="shadow-[var(--shadow-elevated)]">
                 <CardContent className="p-6">
                   <img
