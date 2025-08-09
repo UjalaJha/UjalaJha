@@ -18,10 +18,10 @@
     --popover-foreground: 222 47% 11%;
 
     /* Brand Pastels */
-    --brand: 258 60% 70%; /* lavender */
-    --brand-soft: 258 60% 92%;
-    --brand-2: 188 60% 72%; /* mint */
-    --brand-3: 18 85% 75%;  /* peach */
+    --brand: 0 74% 55%; /* red */
+    --brand-soft: 0 80% 92%;
+    --brand-2: 10 85% 64%; /* coral */
+    --brand-3: 350 80% 60%;  /* rose */
 
     --primary: var(--brand);
     --primary-foreground: 240 20% 99%;
@@ -69,7 +69,7 @@
     --popover: 222 50% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 258 60% 74%;
+    --primary: 0 74% 60%;
     --primary-foreground: 222 47% 11%;
 
     --secondary: 222 35% 14%;

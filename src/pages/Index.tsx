@@ -1,8 +1,12 @@
 import type React from "react";
 import { Helmet } from "react-helmet-async";
-import { Mail, Linkedin, Globe, Award, GraduationCap, Briefcase, Sparkles } from "lucide-react";
+import { Mail, Linkedin, Award, GraduationCap, Briefcase, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+
+import preplacedLogo from "@/assets/logos/preplaced.ico";
+import microsoftLogo from "@/assets/logos/microsoft.svg";
+import jpmcLogo from "@/assets/logos/jpmorgan.svg";
 
 const Index = () => {
   const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (e) => {
@@ -13,7 +17,7 @@ const Index = () => {
     e.currentTarget.style.setProperty("--pointer-y", y);
   };
 
-  const title = "Ujala Jha — SWE @ Microsoft | AI & Release Automation";
+  const title = "Ujala Jha — SWE 2 @ Microsoft | AI & Release Automation";
   const description = "Seasoned software engineer. AI, Release Automation, Cloud. 4x SIH Winner. Let’s build reliable systems.";
 
   return (
@@ -51,11 +55,7 @@ const Index = () => {
       <header className="relative overflow-hidden">
         <div className="ambient-spotlight" aria-hidden="true" />
         <div className="container py-16 md:py-24">
-          <div className="flex items-center justify-between">
-            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-              <Sparkles className="h-4 w-4" />
-              Portfolio
-            </span>
+          <div className="flex items-center justify-end">
             <nav className="hidden md:flex gap-6 text-sm text-muted-foreground">
               <a href="#about" className="story-link">About</a>
               <a href="#experience" className="story-link">Experience</a>
@@ -66,15 +66,20 @@ const Index = () => {
           </div>
 
           <section id="about" className="mt-10 grid md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-7">
+            <div className="order-2 md:order-1 md:col-span-7">
               <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-fade-in">
                 Ujala Jha
               </h1>
-              <p className="mt-3 text-lg md:text-xl text-muted-foreground animate-fade-in">
-                SWE @ Microsoft • Ex-JPMC • 4× Smart India Hackathon Winner
+              <p className="mt-5 text-lg md:text-xl text-muted-foreground animate-fade-in">
+                Solves Problem 24*7 • SWE 2 @ Microsoft • Ex-JPMC • 4× Smart India Hackathon Winner
               </p>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground max-w-2xl animate-fade-in">
-                Ujala is a seasoned developer known for execution excellence and impactful deliveries. Currently building resilient, automated release workflows for Microsoft Fabric, crafting AI agents with GPT for assessments, approvals, and actionable guidance.
+              I turn fuzzy problems into shipped features. 
+              Currently at Microsoft, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the Generative AI wave, I’m also crafting pragmatic AI agents for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.
+
+              Before that, I engineered data pipelines, wrangled AWS clouds, and kept JPMorgan Chase’s markets data warehousing team drama-free. Along the way, I’ve won (and mentored) my way through 20+ hackathons, proving that curiosity, caffeine, and clean code are a powerful trio.
+
+              When I’m not coding, you’ll find me solo-travelling across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a unicycle.  
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="mailto:jhaujala3@gmail.com" aria-label="Email Ujala">
@@ -87,22 +92,29 @@ const Index = () => {
                     <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
                   </Button>
                 </a>
-                <a href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer" aria-label="Blog">
+                <a href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer" aria-label="Preplaced">
                   <Button className="hover-scale" variant="outline">
-                    <Globe className="h-4 w-4 mr-2" /> Blog
+                    <img src={preplacedLogo} alt="Preplaced logo" className="h-4 w-4 mr-2" />
+                    Preplaced
+                  </Button>
+                </a>
+                <a href="https://topmate.io/ujala_jha" target="_blank" rel="noreferrer" aria-label="Topmate">
+                  <Button className="hover-scale" variant="outline">
+                    <img src="/lovable-uploads/e9e7b073-4258-4fcd-ba81-a7715a97d655.png" alt="Topmate logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
+                    Topmate
                   </Button>
                 </a>
               </div>
             </div>
-            <div className="md:col-span-5">
+            <div className="order-1 md:order-2 md:col-span-5">
               <Card className="shadow-[var(--shadow-elevated)]">
                 <CardContent className="p-6">
-                  <ul className="space-y-3 text-sm">
-                    <li><strong>Location:</strong> Mumbai, Maharashtra, India</li>
-                    <li><strong>Email:</strong> <a className="story-link" href="mailto:jhaujala3@gmail.com">jhaujala3@gmail.com</a></li>
-                    <li><strong>Portfolio:</strong> <a className="story-link" href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer">preplaced.in/profile/ujala-jha</a></li>
-                    <li><strong>Advisory:</strong> <a className="story-link" href="https://topmate.io/ujala_jha" target="_blank" rel="noreferrer">topmate.io/ujala_jha</a></li>
-                  </ul>
+                  <img
+                    src="/lovable-uploads/727ca543-175e-45ea-985c-fcc2352e70ad.png"
+                    alt="Ujala Jha headshot"
+                    className="w-full h-80 object-cover rounded-lg shadow-[var(--shadow-soft)]"
+                    loading="lazy"
+                  />
                 </CardContent>
               </Card>
             </div>
@@ -118,7 +130,7 @@ const Index = () => {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-3">
-                    <Briefcase className="h-5 w-5 text-primary" />
+                    <img src={microsoftLogo} alt="Microsoft logo" className="h-5 w-auto" />
                     <h3 className="font-medium">Microsoft — Software Engineer 2</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Sep 2024 — Present • Bengaluru, India</p>
@@ -137,7 +149,7 @@ const Index = () => {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-3">
-                    <Briefcase className="h-5 w-5 text-primary" />
+                    <img src={jpmcLogo} alt="JPMorgan Chase & Co. logo" className="h-5 w-auto" />
                     <h3 className="font-medium">JPMorgan Chase & Co. — Software Engineer 1 → 3</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Aug 2020 — Sep 2024 • Mumbai, India</p>
@@ -174,9 +186,19 @@ const Index = () => {
       </section>
 
       <section id="skills" className="container py-14">
-        <h2 className="text-2xl md:text-3xl font-semibold">Top Skills</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">My Expertise</h2>
         <div className="mt-6 flex flex-wrap gap-2">
-          {['Artificial Intelligence (AI)', 'Release Management', 'Process Automation'].map((s) => (
+          {[
+            'Artificial Intelligence',
+            'Generative AI',
+            'Predictive AI',
+            'Automation',
+            'Microsoft Azure',
+            'AWS',
+            'Software Engineering',
+            'Software Consulting',
+            'Big Data',
+          ].map((s) => (
             <span key={s} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm">{s}</span>
           ))}
         </div>
@@ -184,21 +206,24 @@ const Index = () => {
 
       <section id="awards" className="container py-14">
         <h2 className="text-2xl md:text-3xl font-semibold">Honors & Awards</h2>
-        <div className="mt-6 grid md:grid-cols-2 gap-6">
-          {[
-            'Runner Up — JPMorgan Chase & Co. Code for Good 2019',
-            'Runner-Up — Smart India Hackathon 2018',
-            'Winner — Smart India Hackathon 2019',
-            'Winner — Smart India Hackathon 2020',
-            'Winner (Mentor) — Smart India Hackathon 2022'
-          ].map((a) => (
-            <Card key={a}>
-              <CardContent className="p-6 flex items-start gap-3">
-                <Award className="h-5 w-5 text-primary shrink-0" />
-                <p className="text-sm text-muted-foreground">{a}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="mt-8 relative">
+          <div className="absolute left-4 top-0 bottom-0 w-px bg-border" aria-hidden="true" />
+          <ol className="space-y-6">
+            {[{ year: 2018, title: 'Runner-Up — Smart India Hackathon' },
+              { year: 2019, title: 'Winner — Smart India Hackathon' },
+              { year: 2019, title: 'Runner Up — JPMorgan Chase & Co. Code for Good' },
+              { year: 2020, title: 'Winner — Smart India Hackathon' },
+              { year: 2022, title: 'Winner (Mentor) — Smart India Hackathon' },
+            ].sort((a,b) => b.year - a.year).map((item, idx) => (
+              <li key={`${item.year}-${idx}`} className="relative pl-12">
+                <span className="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-primary ring-4 ring-primary/15" />
+                <div className="p-4 rounded-lg bg-card shadow-[var(--shadow-soft)]">
+                  <p className="text-sm text-muted-foreground">{item.year}</p>
+                  <p className="mt-1 font-medium">{item.title}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -245,9 +270,21 @@ const Index = () => {
                   <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
                 </Button>
               </a>
-              <a href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer">
+              <a href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer" aria-label="Preplaced">
                 <Button variant="outline">
-                  <Globe className="h-4 w-4 mr-2" /> Blog
+                  <img src={preplacedLogo} alt="Preplaced logo" className="h-4 w-4 mr-2" />
+                  Preplaced
+                </Button>
+              </a>
+              <a href="https://topmate.io/ujala_jha" target="_blank" rel="noreferrer" aria-label="Topmate">
+                <Button variant="outline">
+                  <img src="/lovable-uploads/e9e7b073-4258-4fcd-ba81-a7715a97d655.png" alt="Topmate logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
+                  Topmate
+                </Button>
+              </a>
+              <a href="https://www.youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube">
+                <Button variant="outline">
+                  <Youtube className="h-4 w-4 mr-2" /> YouTube
                 </Button>
               </a>
             </div>
