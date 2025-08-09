@@ -73,6 +73,19 @@ const Index = () => {
               <p className="mt-5 text-lg md:text-xl text-muted-foreground animate-fade-in">
                 Solves Problem 24*7 • SWE 2 @ Microsoft • Ex-JPMC • 4× Smart India Hackathon Winner
               </p>
+              {/** Photo for mobile view */}
+              <div className="md:hidden mt-6">
+                <Card className="shadow-[var(--shadow-elevated)]">
+                  <CardContent className="p-6">
+                    <img
+                      src="/lovable-uploads/727ca543-175e-45ea-985c-fcc2352e70ad.png"
+                      alt="Ujala Jha headshot"
+                      className="w-full h-80 object-cover rounded-lg shadow-[var(--shadow-soft)]"
+                      loading="lazy"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground max-w-2xl animate-fade-in">
               I turn fuzzy problems into shipped features. 
               Currently at Microsoft, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the Generative AI wave, I’m also crafting pragmatic AI agents for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.
@@ -106,7 +119,7 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div className="order-2 md:order-2 md:col-span-5">
+            <div className="order-2 md:order-2 md:col-span-5 hidden md:block">
               <Card className="shadow-[var(--shadow-elevated)]">
                 <CardContent className="p-6">
                   <img
