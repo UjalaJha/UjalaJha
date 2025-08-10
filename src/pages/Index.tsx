@@ -40,7 +40,7 @@ const Index = () => {
             sameAs: [
               "https://linkedin.com/in/ujalajha",
               "https://preplaced.in/profile/ujala-jha",
-              "https://topmate.io/ujala_jha"
+              "https://topmate.io/ujalajha"
             ],
             address: {
               "@type": "PostalAddress",
@@ -112,7 +112,7 @@ const Index = () => {
                     Preplaced
                   </Button>
                 </a>
-                <a href="https://topmate.io/ujala_jha" target="_blank" rel="noreferrer" aria-label="Topmate">
+                <a href="https://topmate.io/ujalajha" target="_blank" rel="noreferrer" aria-label="Topmate">
                   <Button className="hover-scale" variant="outline">
                     <img src="/lovable-uploads/e9e7b073-4258-4fcd-ba81-a7715a97d655.png" alt="Topmate logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
                     Topmate
@@ -298,7 +298,7 @@ const Index = () => {
                   Preplaced
                 </Button>
               </a>
-              <a href="https://topmate.io/ujala_jha" target="_blank" rel="noreferrer" aria-label="Topmate">
+              <a href="https://topmate.io/ujalajha" target="_blank" rel="noreferrer" aria-label="Topmate">
                 <Button variant="outline">
                   <img src="/lovable-uploads/e9e7b073-4258-4fcd-ba81-a7715a97d655.png" alt="Topmate logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
                   Topmate
