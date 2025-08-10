@@ -53,7 +53,7 @@ const Index = () => {
       </Helmet>
 
       <div className="fixed top-0 inset-x-0 z-50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="container">
+        <div className="container" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
           <nav className="flex gap-4 md:gap-6 text-sm text-muted-foreground justify-center md:justify-end overflow-x-auto py-6">
             <a href="#about" className="story-link">About</a>
             <a href="#experience" className="story-link">Experience</a>
@@ -65,10 +65,10 @@ const Index = () => {
       </div>
 
       <header className="relative overflow-hidden">
-        <div className="ambient-spotlight" aria-hidden="true" />
+        <div id="about" className="ambient-spotlight" aria-hidden="true" />
         <div className="container pt-[60px] pb-24 md:pt-[60px] md:pb-32">
 
-          <section id="about" className="mt-10 grid md:grid-cols-12 gap-8 items-center">
+          <section className="mt-10 grid md:grid-cols-12 gap-8 items-center">
             <div className="order-1 md:order-1 md:col-span-7">
               <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-fade-in">
                 Hey, I am Ujala
@@ -90,10 +90,10 @@ const Index = () => {
                 </Card>
               </div>
               <div className="mt-6 text-base leading-relaxed text-muted-foreground max-w-2xl animate-fade-in space-y-4">
-                <p>I turn fuzzy problems into shipped features.</p>
-                <p>Currently at Microsoft, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the Generative AI wave, I’m also crafting pragmatic AI agents for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.</p>
-                <p>Before that, I engineered data pipelines, wrangled AWS clouds, and kept JPMorgan Chase’s markets data warehousing team drama-free. Along the way, I’ve won (and mentored) my way through 20+ hackathons, proving that curiosity, caffeine, and clean code are a powerful trio.</p>
-                <p>When I’m not coding, you’ll find me solo-travelling across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a unicycle.</p>
+                <p>I turn <b>fuzzy</b> problems into shipped features.</p>
+                <p>Currently at <b>Microsoft</b>, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the <b>Generative AI </b> wave, I’m also crafting pragmatic AI agents on <b>Azure Cloud</b> for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.</p>
+                <p>Before that, I engineered data pipelines, wrangled <b>AWS clouds</b>, and kept JPMorgan Chase’s markets data <b>warehousing</b> team drama-free. Along the way, I’ve won (and mentored) my way through 20+ hackathons, proving that curiosity, caffeine, and clean code are a powerful trio.</p>
+                <p>When I’m not coding, you’ll find me <b>solo-travelling</b> across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a unicycle.</p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="mailto:jhaujala3@gmail.com" aria-label="Email Ujala">
@@ -136,7 +136,7 @@ const Index = () => {
         </div>
       </header>
 
-      <section id="experience" className="container py-14">
+      <section id="experience" className="container py-16">
         <h2 className="text-2xl md:text-3xl font-semibold">Experience</h2>
         <div className="mt-6 grid gap-6">
           <Card>
@@ -199,7 +199,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="skills" className="container py-14">
+      <section id="skills" className="container py-16">
         <h2 className="text-2xl md:text-3xl font-semibold">My Expertise</h2>
         <div className="mt-6 flex flex-wrap gap-2">
           {[
@@ -218,7 +218,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="awards" className="container py-14">
+      <section id="awards" className="container py-16">
         <h2 className="text-2xl md:text-3xl font-semibold">Honors & Awards</h2>
         <div className="mt-8 relative">
           <div className="absolute left-4 top-0 bottom-0 w-px bg-border" aria-hidden="true" />
