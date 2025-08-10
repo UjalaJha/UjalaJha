@@ -17,7 +17,7 @@ const Index = () => {
     e.currentTarget.style.setProperty("--pointer-y", y);
   };
 
-  const title = "Ujala Jha — SWE 2 @ Microsoft | AI & Release Automation";
+  const title = "Ujala Jha — SWE @ Microsoft | AI & Release Automation";
   const description = "Seasoned software engineer. AI, Release Automation, Cloud. 4x SIH Winner. Let’s build reliable systems.";
 
   return (
@@ -52,48 +52,49 @@ const Index = () => {
         </script>
       </Helmet>
 
+      <div className="fixed top-0 inset-x-0 z-50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+        <div className="container">
+          <nav className="flex gap-4 md:gap-6 text-sm text-muted-foreground justify-center md:justify-end overflow-x-auto py-6">
+            <a href="#about" className="story-link">About</a>
+            <a href="#experience" className="story-link">Experience</a>
+            <a href="#skills" className="story-link">Skills</a>
+            <a href="#awards" className="story-link">Awards</a>
+            <a href="#contact" className="story-link">Contact</a>
+          </nav>
+        </div>
+      </div>
+
       <header className="relative overflow-hidden">
         <div className="ambient-spotlight" aria-hidden="true" />
-        <div className="container py-16 md:py-24">
-          <div className="flex items-center justify-end">
-            <nav className="hidden md:flex gap-6 text-sm text-muted-foreground">
-              <a href="#about" className="story-link">About</a>
-              <a href="#experience" className="story-link">Experience</a>
-              <a href="#skills" className="story-link">Skills</a>
-              <a href="#awards" className="story-link">Awards</a>
-              <a href="#contact" className="story-link">Contact</a>
-            </nav>
-          </div>
+        <div className="container pt-[60px] pb-24 md:pt-[60px] md:pb-32">
 
           <section id="about" className="mt-10 grid md:grid-cols-12 gap-8 items-center">
             <div className="order-1 md:order-1 md:col-span-7">
               <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-fade-in">
-                Ujala Jha
+                Hey, I am Ujala
               </h1>
-              <p className="mt-5 text-lg md:text-xl text-muted-foreground animate-fade-in">
-                Solves Problem 24*7 • SWE 2 @ Microsoft • Ex-JPMC • 4× Smart India Hackathon Winner
+              <p className="mt-10 text-lg md:text-xl font-semibold text-muted-foreground animate-fade-in">
+                SWE @ Microsoft | Ex-JPMC | 4× Smart India Hackathon Winner
               </p>
-              {/** Photo for mobile view */}
-              <div className="md:hidden mt-6">
-                <Card className="shadow-[var(--shadow-elevated)]">
-                  <CardContent className="p-6">
+              {/* Mobile-only photo placed between subtitle and description */}
+              <div className="mt-6 md:hidden">
+                <Card className="shadow-[var(--shadow-soft)]">
+                  <CardContent className="p-0">
                     <img
                       src="/lovable-uploads/727ca543-175e-45ea-985c-fcc2352e70ad.png"
                       alt="Ujala Jha headshot"
-                      className="w-full h-80 object-cover rounded-lg shadow-[var(--shadow-soft)]"
+                      className="w-full h-64 object-cover rounded-lg"
                       loading="lazy"
                     />
                   </CardContent>
                 </Card>
               </div>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground max-w-2xl animate-fade-in">
-              I turn fuzzy problems into shipped features. 
-              Currently at Microsoft, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the Generative AI wave, I’m also crafting pragmatic AI agents for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.
-
-              Before that, I engineered data pipelines, wrangled AWS clouds, and kept JPMorgan Chase’s markets data warehousing team drama-free. Along the way, I’ve won (and mentored) my way through 20+ hackathons, proving that curiosity, caffeine, and clean code are a powerful trio.
-
-              When I’m not coding, you’ll find me solo-travelling across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a unicycle.  
-              </p>
+              <div className="mt-6 text-base leading-relaxed text-muted-foreground max-w-2xl animate-fade-in space-y-4">
+                <p>I turn fuzzy problems into shipped features.</p>
+                <p>Currently at Microsoft, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the Generative AI wave, I’m also crafting pragmatic AI agents for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.</p>
+                <p>Before that, I engineered data pipelines, wrangled AWS clouds, and kept JPMorgan Chase’s markets data warehousing team drama-free. Along the way, I’ve won (and mentored) my way through 20+ hackathons, proving that curiosity, caffeine, and clean code are a powerful trio.</p>
+                <p>When I’m not coding, you’ll find me solo-travelling across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a unicycle.</p>
+              </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="mailto:jhaujala3@gmail.com" aria-label="Email Ujala">
                   <Button className="hover-scale" variant="default">
@@ -163,7 +164,7 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3">
                     <img src={jpmcLogo} alt="JPMorgan Chase & Co. logo" className="h-5 w-auto" />
-                    <h3 className="font-medium">JPMorgan Chase & Co. — Software Engineer 1 → 3</h3>
+                    <h3 className="font-medium">JPMC - Senior Software Engineer</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Aug 2020 — Sep 2024 • Mumbai, India</p>
                   <ul className="mt-3 list-disc list-inside text-sm text-muted-foreground space-y-1">
