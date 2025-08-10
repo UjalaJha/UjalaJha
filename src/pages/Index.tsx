@@ -136,6 +136,9 @@ const Index = () => {
         </div>
       </header>
 
+      <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
+      
+
       <section id="experience" className="container pt-16">
         <h2 className="text-2xl md:text-3xl font-semibold py-5">Experience</h2>
         <div className="mt-6 grid gap-6">
@@ -218,6 +221,8 @@ const Index = () => {
         </div>
       </section>
 
+      <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
+
       <section id="awards" className="container py-16">
         <h2 className="text-2xl md:text-3xl font-semibold py-5">Honors & Awards</h2>
         <div className="mt-8 relative">
@@ -240,6 +245,8 @@ const Index = () => {
           </ol>
         </div>
       </section>
+
+      <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
 
       <section id="certifications" className="container py-14">
         <h2 className="text-2xl md:text-3xl font-semibold">Certifications</h2>
@@ -308,7 +315,7 @@ const Index = () => {
 
       <footer className="py-10">
         <div className="container text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Ujala Jha • Built with a pastel minimalist design
+          © {new Date().getFullYear()} Ujala Jha • Built with love and AI
         </div>
       </footer>
     </main>
