@@ -145,7 +145,7 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3">
                     <img src={microsoftLogo} alt="Microsoft logo" className="h-5 w-auto" />
-                    <h3 className="font-medium">Microsoft — Software Engineer 2</h3>
+                    <h3 className="font-medium">Microsoft | Software Engineer 2</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Sep 2024 — Present • Bengaluru, India</p>
                   <ul className="mt-3 list-disc list-inside text-sm text-muted-foreground space-y-1">
@@ -164,7 +164,7 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3">
                     <img src={jpmcLogo} alt="JPMorgan Chase & Co. logo" className="h-5 w-auto" />
-                    <h3 className="font-medium">JPMC - Senior Software Engineer</h3>
+                    <h3 className="font-medium">JPMC | Senior Software Engineer</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Aug 2020 — Sep 2024 • Mumbai, India</p>
                   <ul className="mt-3 list-disc list-inside text-sm text-muted-foreground space-y-1">
@@ -184,7 +184,7 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3">
                     <Briefcase className="h-5 w-5 text-primary" />
-                    <h3 className="font-medium">Atto Infotech — Software Engineer</h3>
+                    <h3 className="font-medium">Atto Infotech | Software Engineer</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">May 2018 — Jul 2020 • Mumbai, India</p>
                   <ul className="mt-3 list-disc list-inside text-sm text-muted-foreground space-y-1">
