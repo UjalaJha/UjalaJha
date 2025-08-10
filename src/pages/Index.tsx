@@ -66,7 +66,7 @@ const Index = () => {
 
       <header className="relative overflow-hidden">
         <div id="about" className="ambient-spotlight" aria-hidden="true" />
-        <div className="container pt-[60px] md:pt-[60px] md:pb-32">
+        <div className="container pt-[60px] md:pt-[60px] pb-20">
 
           <section className="mt-10 grid md:grid-cols-12 gap-8 items-center">
             <div className="order-1 md:order-1 md:col-span-7">
@@ -233,6 +233,7 @@ const Index = () => {
               { year: 2019, title: 'Runner Up — JPMorgan Chase & Co. Code for Good' },
               { year: 2020, title: 'Winner — Smart India Hackathon' },
               { year: 2022, title: 'Winner (Mentor) — Smart India Hackathon' },
+              { year: 2022, title: 'Winner — JPMC Post Trade Technology India Hackathon' },
             ].sort((a,b) => b.year - a.year).map((item, idx) => (
               <li key={`${item.year}-${idx}`} className="relative pl-12">
                 <span className="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-primary ring-4 ring-primary/15" />
