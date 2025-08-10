@@ -70,7 +70,7 @@ const Index = () => {
 
           <section className="mt-10 grid md:grid-cols-12 gap-8 items-center">
             <div className="order-1 md:order-1 md:col-span-7">
-              <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-fade-in">
+              <h1 className="font-display text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent animate-fade-in pb-1">
                 Hey, I am Ujala!
               </h1>
               <p className="mt-10 text-lg md:text-xl font-semibold text-muted-foreground animate-fade-in">
