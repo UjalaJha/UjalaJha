@@ -251,10 +251,11 @@ const Index = () => {
         <h2 className="text-2xl md:text-3xl font-semibold py-5">Codes & Candids</h2>
         <div className="flex space-x-4">
           {[
-        '/ujala_social_photos/ujala_mentor1.jpeg',
+        '/ujala_social_photos/image.png',
         '/ujala_social_photos/ujala_mentor2.jpeg',
         '/ujala_social_photos/ujala_mentor3.jpeg',
         '/ujala_social_photos/ujala_mentor5.jpeg',
+        '/ujala_social_photos/ujala_mentor1.jpeg',
         '/ujala_social_photos/ujala_jpmc.jpeg',
           ].map((photo, index) => (
         <div key={index} className="flex-shrink-0 w-64">
@@ -263,6 +264,7 @@ const Index = () => {
           ))}
         </div>
       </section>
+  
 
       
 
