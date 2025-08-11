@@ -247,6 +247,8 @@ const Index = () => {
         </div>
       </section>
 
+      <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
+
       <section id="social-photos" className="container py-16 overflow-x-auto">
         <h2 className="text-2xl md:text-3xl font-semibold py-5">Codes & Candids</h2>
         <div className="flex space-x-4">
