@@ -93,7 +93,7 @@ const Index = () => {
                 <p>I turn <b>fuzzy</b> problems into shipped features.</p>
                 <p>Currently at <b>Microsoft</b>, I’m automating and building reliable release frameworks for Microsoft Fabric. Riding the <b>Generative AI </b> wave, I’m also crafting pragmatic AI agents on <b>Azure Cloud</b> for risk checks, smart approvals, and actionable nudges—so teams ship faster and better, with confidence.</p>
                 <p>Before that, I engineered data pipelines, wrangled <b>AWS clouds</b>, and kept JPMorgan Chase’s markets data <b>warehousing</b> team drama-free. Along the way, I’ve won (and mentored) my way through 20+ hackathons, proving that curiosity, caffeine, and clean code are a powerful trio.</p>
-                <p>When I’m not coding, you’ll find me <b>solo-travelling</b> across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a unicycle.</p>
+                <p>When I’m not coding, you’ll find me <b>solo-travelling</b> across the country or catching up on things I skipped as a kid—because it’s never too late to learn to juggle… or ride a bike!.</p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="mailto:jhaujala3@gmail.com" aria-label="Email Ujala">
