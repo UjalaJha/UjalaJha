@@ -165,6 +165,27 @@ const Index = () => {
       </header>
 
       <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
+
+      <section id="codes-candids" className="container py-14">
+        <h2 className="text-2xl md:text-3xl font-semibold">Codes & Candids</h2>
+        <div className="mt-6">
+          <Carousel setApi={setCandidApi} opts={{ loop: true }} className="w-full">
+            <CarouselContent>
+              {candidImages.map((img, idx) => (
+                <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
+                  <Card className="overflow-hidden shadow-[var(--shadow-soft)]">
+                    <CardContent className="p-0">
+                      <img src={img.src} alt={img.alt} className="w-full h-64 object-cover" loading="lazy" />
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+      </section>
+
+      <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
       
 
       <section id="experience" className="container pt-16">
@@ -272,27 +293,6 @@ const Index = () => {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
-
-      <section id="codes-candids" className="container py-14">
-        <h2 className="text-2xl md:text-3xl font-semibold">Codes & Candids</h2>
-        <div className="mt-6">
-          <Carousel setApi={setCandidApi} opts={{ loop: true }} className="w-full">
-            <CarouselContent>
-              {candidImages.map((img, idx) => (
-                <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden shadow-[var(--shadow-soft)]">
-                    <CardContent className="p-0">
-                      <img src={img.src} alt={img.alt} className="w-full h-64 object-cover" loading="lazy" />
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
         </div>
       </section>
     
