@@ -248,7 +248,7 @@ const Index = () => {
       </section>
 
       <section id="social-photos" className="container py-16 overflow-x-auto">
-        <h2 className="text-2xl md:text-3xl font-semibold py-5"></h2>
+        <h2 className="text-2xl md:text-3xl font-semibold py-5">Codes & Candids</h2>
         <div className="flex space-x-4">
           {[
         '/ujala_social_photos/ujala_mentor1.jpeg',
