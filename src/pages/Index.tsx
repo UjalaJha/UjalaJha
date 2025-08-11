@@ -247,6 +247,25 @@ const Index = () => {
         </div>
       </section>
 
+      <section id="social-photos" className="container py-16 overflow-x-auto">
+        <h2 className="text-2xl md:text-3xl font-semibold py-5"></h2>
+        <div className="flex space-x-4">
+          {[
+        '/ujala_social_photos/ujala_mentor1.jpeg',
+        '/ujala_social_photos/ujala_mentor2.jpeg',
+        '/ujala_social_photos/ujala_mentor3.jpeg',
+        '/ujala_social_photos/ujala_mentor5.jpeg',
+        '/ujala_social_photos/ujala_jpmc.jpeg',
+          ].map((photo, index) => (
+        <div key={index} className="flex-shrink-0 w-64">
+          <img src={photo} alt={`Social photo ${index + 1}`} className="w-full h-64 object-cover rounded-lg shadow-md" />
+        </div>
+          ))}
+        </div>
+      </section>
+
+      
+
       <hr style={{ borderTop: '2px solid red', width: '90%', margin: '20px auto' }} />
 
       <section id="certifications" className="container py-14">
