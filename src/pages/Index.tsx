@@ -146,6 +146,12 @@ const Index = () => {
                     Topmate
                   </Button>
                 </a>
+                <a href="https://www.instagram.com/indie.butterfly/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <Button className="hover-scale" variant="outline">
+                    <img src="/lovable-uploads/instalogo.png" alt="Instagram logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
+                    Instagram
+                  </Button>
+                </a>
               </div>
             </div>
             <div className="order-2 md:order-2 md:col-span-5 hidden md:block">
@@ -359,6 +365,12 @@ const Index = () => {
                   <Youtube className="h-4 w-4 mr-2" /> YouTube
                 </Button>
               </a>
+              <a href="https://www.instagram.com/indie.butterfly/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <Button className="hover-scale" variant="outline">
+                    <img src="/lovable-uploads/instalogo.png" alt="Instagram logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
+                    Instagram
+                  </Button>
+                </a>
             </div>
           </CardContent>
         </Card>
