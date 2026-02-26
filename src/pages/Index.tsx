@@ -102,7 +102,7 @@ const Index = () => {
                 Hey, I am Ujala!
               </h1>
               <p className="mt-10 text-lg md:text-xl font-semibold text-muted-foreground animate-fade-in">
-                SWE @ Microsoft | Ex-JPMC | 4× Smart India Hackathon Winner
+                Senior Software Engineer @ Microsoft | Ex-JPMC | 4× Smart India Hackathon Winner
               </p>
               {/* Mobile-only photo placed between subtitle and description */}
               <div className="mt-6 md:hidden">
@@ -203,7 +203,7 @@ const Index = () => {
                 <div>
                   <div className="flex items-center gap-3">
                     <img src={microsoftLogo} alt="Microsoft logo" className="h-5 w-auto" />
-                    <h3 className="font-medium">Microsoft | Software Engineer 2</h3>
+                    <h3 className="font-medium">Microsoft | Senior Software Engineer 2</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mt-1">Sep 2024 — Present • Bengaluru, India</p>
                   <ul className="mt-3 list-disc list-inside text-sm text-muted-foreground space-y-1">
