@@ -30,7 +30,8 @@ const Index = () => {
     { src: "/ujala_social_photos/ujala_mentor3.jpeg", alt: "Ujala Jha candid 3" },
     { src: "/ujala_social_photos/ujala_mentor5.jpeg", alt: "Ujala Jha candid 3" },
     { src: "/ujala_social_photos/ujala_mentor1.jpeg", alt: "Ujala Jha candid 3" },
-    { src: "/ujala_social_photos/ujala_jpmc.jpeg", alt: "Ujala Jha candid 3" }
+    { src: "/ujala_social_photos/ujala_jpmc.jpeg", alt: "Ujala Jha candid 3" },
+    { src: "/ujala_social_photos/ujala_presenting.jpg", alt: "Ujala Jha presenting" }
   ];
   const [candidApi, setCandidApi] = useState<CarouselApi | null>(null);
 
