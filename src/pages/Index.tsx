@@ -279,33 +279,28 @@ const Index = () => {
         <div className="animate-marquee whitespace-nowrap text-muted-foreground flex items-center gap-8">
           <span className="flex items-center gap-1.5 text-cyan-400 font-bold"><Zap className="h-3 w-3" /> Senior SWE @ Microsoft</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Solo Backpacker & Traveller</span>
+          <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Backpacker & Solo Traveller</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-pink-400 font-bold"><Award className="h-3 w-3" /> 4× SIH + Fabric Global '26</span>
-          <span className="text-zinc-600">•</span>
+
           <span className="flex items-center gap-1.5 text-emerald-400 font-bold"><Code2 className="h-3 w-3" /> Azure GenAI & Release Automation</span>
           <span className="text-zinc-600">•</span>
           <span className="flex items-center gap-1.5 text-yellow-300 font-bold"><Coffee className="h-3 w-3" /> 100% Filter Coffee-Powered</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-purple-400 font-bold"><Sparkles className="h-3 w-3" /> Adult Learner: Badminton</span>
-          <span className="text-zinc-600">•</span>
+
           <span className="flex items-center gap-1.5 text-rose-400 font-bold"><Cat className="h-3 w-3" /> Cat Lover</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-cyan-300 font-bold"><Waves className="h-3 w-3" /> Beach ➔ Mountain Person</span>
-          <span className="text-zinc-600">•</span>
+
           {/* Duplicate for infinite loop */}
           <span className="flex items-center gap-1.5 text-cyan-400 font-bold"><Zap className="h-3 w-3" /> Senior SWE @ Microsoft</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Solo Backpacker & Traveller</span>
+          <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Backpacker & Solo Traveller</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-pink-400 font-bold"><Award className="h-3 w-3" /> 4× SIH + Fabric Global '26</span>
-          <span className="text-zinc-600">•</span>
+
           <span className="flex items-center gap-1.5 text-emerald-400 font-bold"><Code2 className="h-3 w-3" /> Azure GenAI & Release Automation</span>
           <span className="text-zinc-600">•</span>
           <span className="flex items-center gap-1.5 text-yellow-300 font-bold"><Coffee className="h-3 w-3" /> 100% Filter Coffee-Powered</span>
           <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-purple-400 font-bold"><Sparkles className="h-3 w-3" /> Adult Learner: Badminton</span>
-          <span className="text-zinc-600">•</span>
+
           <span className="flex items-center gap-1.5 text-rose-400 font-bold"><Cat className="h-3 w-3" /> Cat Lover</span>
         </div>
       </div>
@@ -320,7 +315,7 @@ const Index = () => {
               </div>
             </div>
             <span className="font-mono text-sm font-semibold tracking-tight text-white group-hover:text-cyan-400 transition-colors hidden sm:inline">
-              ujala.dev
+              ujalajha.me
             </span>
           </a>
 
@@ -352,7 +347,7 @@ const Index = () => {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
-                  <span>Status: <strong className="text-white">Shipping bots & planning next backpacking trip</strong></span>
+                  <span>Status: <strong className="text-white">Shipping bots & planning next backpacking</strong></span>
                 </div>
                 {/* <span className="funky-sticker bg-cyan-950/70 text-cyan-300 border border-cyan-500/30">
                   <Terminal className="h-3.5 w-3.5 text-cyan-400" /> Senior SWE @ Microsoft
@@ -516,6 +511,8 @@ const Index = () => {
         </div>
       </header>
 
+      <div className="section-divider" />
+
       {/* ─── LIVE STATS COUNTER ─── */}
       <section className="container max-w-6xl mx-auto px-4 py-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -539,8 +536,8 @@ const Index = () => {
             <div className="h-10 w-10 mx-auto rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-2 group-hover:scale-110 transition-transform">
               <Compass className="h-5 w-5" />
             </div>
-            <div className="text-3xl font-extrabold text-amber-400 font-mono">15+ Trips</div>
-            <div className="text-xs text-zinc-400 font-mono mt-1">Solo Travel & Backpacking</div>
+            <div className="text-3xl font-extrabold text-amber-400 font-mono">20+ Trips</div>
+            <div className="text-xs text-zinc-400 font-mono mt-1">Backpacking & Solo Travel </div>
           </div>
 
           <div className="glass-card rounded-2xl p-5 border-emerald-500/20 hover:border-emerald-500/50 transition-all text-center group">
@@ -1047,10 +1044,10 @@ const Index = () => {
           <div>
             <span className="text-xs font-mono text-purple-400 font-bold uppercase">B.E. Information Technology</span>
             <h3 className="text-lg font-bold text-white mt-0.5">
-              Vivekanand Education Society's Institute Of Technology (VESIT)
+              Mumbai University
             </h3>
             <p className="text-xs sm:text-sm text-zinc-400 font-mono mt-1">
-              Mumbai University • Graduated Aug 2020 • Focus on Distributed Systems & Data Structures
+              Graduated Aug 2020
             </p>
           </div>
         </div>
