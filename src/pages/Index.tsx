@@ -223,11 +223,11 @@ const Index = () => {
   const navLinks = [
     { href: "#about", id: "about", label: "About" },
     { href: "#dual-life", id: "dual-life", label: "Code & Travels" },
-    { href: "#travel-map", id: "travel-map", label: "Travel Map" },
-    { href: "#terminal", id: "terminal", label: "Console" },
-    { href: "#gallery", id: "gallery", label: "Polaroids" },
     { href: "#experience", id: "experience", label: "Experience" },
     { href: "#awards", id: "awards", label: "Awards" },
+    { href: "#travel-map", id: "travel-map", label: "Travel Map" },
+    { href: "#gallery", id: "gallery", label: "Polaroids" },
+    { href: "#terminal", id: "terminal", label: "Console" },
     { href: "#contact", id: "contact", label: "Connect" },
   ];
 
@@ -235,11 +235,11 @@ const Index = () => {
     const sectionIds = [
       "about",
       "dual-life",
-      "travel-map",
-      "terminal",
-      "gallery",
       "experience",
       "awards",
+      "travel-map",
+      "gallery",
+      "terminal",
       "contact",
     ];
 
@@ -718,166 +718,6 @@ const Index = () => {
 
       <div className="section-divider" />
 
-      {/* ─── INTERACTIVE NOMAD TRAVEL MAP ─── */}
-      <section id="travel-map" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
-        <TravelMap />
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ─── INTERACTIVE TERMINAL CONSOLE ─── */}
-      <section id="terminal" className="container max-w-4xl mx-auto px-4 py-20 scroll-reveal opacity-0">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-mono text-cyan-400 mb-2">
-            <Terminal className="h-3.5 w-3.5" /> INTERACTIVE PLAYGROUND
-          </div>
-          <h2 className="text-3xl font-bold text-white">Wanderer & Dev CLI</h2>
-          <p className="text-zinc-400 text-xs sm:text-sm mt-1">
-            Click commands below to inspect Ujala's passions, passport log, and secret side-quests:
-          </p>
-        </div>
-
-        {/* Command buttons bar */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-          <button
-            onClick={() => runTerminalCmd("ujala.getVibe()")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "ujala.getVibe()"
-              ? "bg-cyan-500/20 text-cyan-300 border-cyan-400"
-              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
-              }`}
-          >
-            ujala.getVibe()
-          </button>
-          <button
-            onClick={() => runTerminalCmd("cat passport.json")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "cat passport.json()"
-              ? "bg-amber-500/20 text-amber-300 border-amber-400"
-              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
-              }`}
-          >
-            cat passport.json
-          </button>
-          <button
-            onClick={() => runTerminalCmd("git status --life")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "git status --life"
-              ? "bg-pink-500/20 text-pink-300 border-pink-400"
-              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
-              }`}
-          >
-            git status --life
-          </button>
-          <button
-            onClick={() => runTerminalCmd("npm run tech-stack")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "npm run tech-stack"
-              ? "bg-emerald-500/20 text-emerald-300 border-emerald-400"
-              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
-              }`}
-          >
-            npm run tech-stack
-          </button>
-          <button
-            onClick={() => runTerminalCmd("sudo relax")}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "sudo relax"
-              ? "bg-purple-500/20 text-purple-300 border-purple-400"
-              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
-              }`}
-          >
-            sudo relax ☕
-          </button>
-        </div>
-
-        {/* Terminal window */}
-        <div className="rounded-xl overflow-hidden bg-[#070b14] border border-cyan-500/30 shadow-2xl shadow-cyan-950/40">
-          <div className="bg-[#0f1629] px-4 py-2.5 flex items-center justify-between border-b border-white/10">
-            <div className="flex items-center gap-2">
-              <div className="h-3 w-3 rounded-full bg-rose-500/80" />
-              <div className="h-3 w-3 rounded-full bg-amber-500/80" />
-              <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
-            </div>
-            <span className="font-mono text-xs text-zinc-400">ujala-shell v2.6.0 (zsh)</span>
-            <div className="font-mono text-xs text-cyan-400">status: active</div>
-          </div>
-          <div className="p-5 font-mono text-xs sm:text-sm text-zinc-200 space-y-3 min-h-[220px]">
-            <div className="flex items-center gap-2 text-cyan-400">
-              <span>➜</span>
-              <span className="text-amber-400">~</span>
-              <span className="text-zinc-400">$</span>
-              <span className="text-white font-semibold">{terminalCommand}</span>
-            </div>
-            <pre className="text-emerald-300/90 whitespace-pre-wrap font-mono text-xs sm:text-sm leading-relaxed bg-black/40 p-4 rounded-lg border border-white/5">
-              {terminalOutput}
-            </pre>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ─── POLAROID GALLERY: CODES & CANDIDS ─── */}
-      <section id="gallery" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
-        <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-xs font-mono text-amber-400 mb-2">
-              <Camera className="h-3.5 w-3.5" /> MEMORIES & LOGS
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-              Codes, Summits & Candids
-            </h2>
-            <p className="text-zinc-400 text-sm mt-1">
-              Snapshots of hackathon stages, mountain peaks, community mentoring & travels.
-            </p>
-          </div>
-          <div className="text-xs font-mono text-zinc-400">
-            Swipe or let auto-scroll ⇄
-          </div>
-        </div>
-
-        <Carousel setApi={setCandidApi} opts={{ loop: true }} className="w-full">
-          <CarouselContent className="-ml-4">
-            {candidImages.map((img, idx) => (
-              <CarouselItem key={idx} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                <div className="polaroid-wrapper h-full flex flex-col justify-between">
-                  {/* Simulated Washi Tape with colors */}
-                  <div className={`washi-tape ${img.tapeColor}`} />
-
-                  <div>
-                    <div className="rounded-lg overflow-hidden relative group">
-                      <img
-                        src={img.src}
-                        alt={img.caption}
-                        className="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                      <div className="absolute top-2.5 left-2.5">
-                        <span className="stamp-badge bg-black/70 text-cyan-300 border-cyan-400/50">
-                          {img.tag}
-                        </span>
-                      </div>
-                      <div className="absolute bottom-2.5 right-2.5">
-                        <span className="text-[11px] font-mono text-white/90 bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10 flex items-center gap-1">
-                          <MapPin className="h-3 w-3 text-amber-400" /> {img.location}
-                        </span>
-                      </div>
-                    </div>
-
-                    <p className="mt-3.5 text-xs sm:text-sm font-medium text-zinc-200 leading-snug">
-                      {img.caption}
-                    </p>
-                  </div>
-
-                  <div className="mt-3 pt-2 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-zinc-400">
-                    <span>#ujala-adventures</span>
-                    <Heart className="h-3.5 w-3.5 text-pink-500/70" />
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </section>
-
-      <div className="section-divider" />
-
       {/* ─── EXPERIENCE: FLIGHT & STINT TICKETS ─── */}
       <section id="experience" className="container max-w-5xl mx-auto px-4 py-20 scroll-reveal opacity-0">
         <div className="flex items-center gap-3 mb-10">
@@ -1073,7 +913,6 @@ const Index = () => {
             <Flame className="h-3.5 w-3.5" /> HACKATHONS & WINS
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Honors & Hackathon Victories</h2>
-          {/* <p className="text-zinc-400 text-sm mt-1">4× Smart India Hackathon wins across consecutive years</p> */}
         </div>
 
         <div className="relative">
@@ -1115,6 +954,166 @@ const Index = () => {
             <p className="text-xs sm:text-sm text-zinc-400 font-mono mt-1">
               Graduated Aug 2020
             </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ─── INTERACTIVE NOMAD TRAVEL MAP ─── */}
+      <section id="travel-map" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
+        <TravelMap />
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ─── POLAROID GALLERY: CODES & CANDIDS ─── */}
+      <section id="gallery" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
+        <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-950/60 border border-amber-500/30 text-xs font-mono text-amber-400 mb-2">
+              <Camera className="h-3.5 w-3.5" /> MEMORIES & LOGS
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+              Codes, Summits & Candids
+            </h2>
+            <p className="text-zinc-400 text-sm mt-1">
+              Snapshots of hackathon stages, mountain peaks, community mentoring & travels.
+            </p>
+          </div>
+          <div className="text-xs font-mono text-zinc-400">
+            Swipe or let auto-scroll ⇄
+          </div>
+        </div>
+
+        <Carousel setApi={setCandidApi} opts={{ loop: true }} className="w-full">
+          <CarouselContent className="-ml-4">
+            {candidImages.map((img, idx) => (
+              <CarouselItem key={idx} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                <div className="polaroid-wrapper h-full flex flex-col justify-between">
+                  {/* Simulated Washi Tape with colors */}
+                  <div className={`washi-tape ${img.tapeColor}`} />
+
+                  <div>
+                    <div className="rounded-lg overflow-hidden relative group">
+                      <img
+                        src={img.src}
+                        alt={img.caption}
+                        className="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute top-2.5 left-2.5">
+                        <span className="stamp-badge bg-black/70 text-cyan-300 border-cyan-400/50">
+                          {img.tag}
+                        </span>
+                      </div>
+                      <div className="absolute bottom-2.5 right-2.5">
+                        <span className="text-[11px] font-mono text-white/90 bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-white/10 flex items-center gap-1">
+                          <MapPin className="h-3 w-3 text-amber-400" /> {img.location}
+                        </span>
+                      </div>
+                    </div>
+
+                    <p className="mt-3.5 text-xs sm:text-sm font-medium text-zinc-200 leading-snug">
+                      {img.caption}
+                    </p>
+                  </div>
+
+                  <div className="mt-3 pt-2 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-zinc-400">
+                    <span>#ujala-adventures</span>
+                    <Heart className="h-3.5 w-3.5 text-pink-500/70" />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ─── INTERACTIVE TERMINAL CONSOLE ─── */}
+      <section id="terminal" className="container max-w-4xl mx-auto px-4 py-20 scroll-reveal opacity-0">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-xs font-mono text-cyan-400 mb-2">
+            <Terminal className="h-3.5 w-3.5" /> INTERACTIVE PLAYGROUND
+          </div>
+          <h2 className="text-3xl font-bold text-white">Wanderer & Dev CLI</h2>
+          <p className="text-zinc-400 text-xs sm:text-sm mt-1">
+            Click commands below to inspect Ujala's passions, passport log, and secret side-quests:
+          </p>
+        </div>
+
+        {/* Command buttons bar */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+          <button
+            onClick={() => runTerminalCmd("ujala.getVibe()")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "ujala.getVibe()"
+              ? "bg-cyan-500/20 text-cyan-300 border-cyan-400"
+              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
+              }`}
+          >
+            ujala.getVibe()
+          </button>
+          <button
+            onClick={() => runTerminalCmd("cat passport.json")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "cat passport.json()"
+              ? "bg-amber-500/20 text-amber-300 border-amber-400"
+              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
+              }`}
+          >
+            cat passport.json
+          </button>
+          <button
+            onClick={() => runTerminalCmd("git status --life")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "git status --life"
+              ? "bg-pink-500/20 text-pink-300 border-pink-400"
+              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
+              }`}
+          >
+            git status --life
+          </button>
+          <button
+            onClick={() => runTerminalCmd("npm run tech-stack")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "npm run tech-stack"
+              ? "bg-emerald-500/20 text-emerald-300 border-emerald-400"
+              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
+              }`}
+          >
+            npm run tech-stack
+          </button>
+          <button
+            onClick={() => runTerminalCmd("sudo relax")}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${terminalCommand === "sudo relax"
+              ? "bg-purple-500/20 text-purple-300 border-purple-400"
+              : "bg-black/40 text-zinc-400 border-white/10 hover:text-white"
+              }`}
+          >
+            sudo relax ☕
+          </button>
+        </div>
+
+        {/* Terminal window */}
+        <div className="rounded-xl overflow-hidden bg-[#070b14] border border-cyan-500/30 shadow-2xl shadow-cyan-950/40">
+          <div className="bg-[#0f1629] px-4 py-2.5 flex items-center justify-between border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 rounded-full bg-rose-500/80" />
+              <div className="h-3 w-3 rounded-full bg-amber-500/80" />
+              <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
+            </div>
+            <span className="font-mono text-xs text-zinc-400">ujala-shell v2.6.0 (zsh)</span>
+            <div className="font-mono text-xs text-cyan-400">status: active</div>
+          </div>
+          <div className="p-5 font-mono text-xs sm:text-sm text-zinc-200 space-y-3 min-h-[220px]">
+            <div className="flex items-center gap-2 text-cyan-400">
+              <span>➜</span>
+              <span className="text-amber-400">~</span>
+              <span className="text-zinc-400">$</span>
+              <span className="text-white font-semibold">{terminalCommand}</span>
+            </div>
+            <pre className="text-emerald-300/90 whitespace-pre-wrap font-mono text-xs sm:text-sm leading-relaxed bg-black/40 p-4 rounded-lg border border-white/5">
+              {terminalOutput}
+            </pre>
           </div>
         </div>
       </section>
