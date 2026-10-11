@@ -34,6 +34,7 @@ import type { CarouselApi } from "@/components/ui/carousel";
 
 import microsoftLogo from "@/assets/logos/microsoft.svg";
 import jpmcLogo from "@/assets/logos/jpmorganchase_logo.jpeg";
+import { TravelMap } from "@/components/TravelMap";
 
 const Index = () => {
   const [terminalCommand, setTerminalCommand] = useState<string>("ujala.getVibe()");
@@ -222,6 +223,7 @@ const Index = () => {
   const navLinks = [
     { href: "#about", id: "about", label: "About" },
     { href: "#dual-life", id: "dual-life", label: "Code & Travels" },
+    { href: "#travel-map", id: "travel-map", label: "Travel Map" },
     { href: "#terminal", id: "terminal", label: "Console" },
     { href: "#gallery", id: "gallery", label: "Polaroids" },
     { href: "#experience", id: "experience", label: "Experience" },
@@ -233,6 +235,7 @@ const Index = () => {
     const sectionIds = [
       "about",
       "dual-life",
+      "travel-map",
       "terminal",
       "gallery",
       "experience",
@@ -711,6 +714,13 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* ─── INTERACTIVE NOMAD TRAVEL MAP ─── */}
+      <section id="travel-map" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
+        <TravelMap />
       </section>
 
       <div className="section-divider" />
