@@ -338,7 +338,7 @@ const Index = () => {
       </nav>
 
       {/* ─── HERO SECTION ─── */}
-      <header className="relative pt-24 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+      <header className="relative pt-32 pb-16 md:pt-36 md:pb-24 overflow-hidden">
         <div id="about" className="ambient-spotlight" aria-hidden="true" />
 
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
@@ -354,7 +354,7 @@ const Index = () => {
                   </span>
                   <span>Status: <strong className="text-white">Shipping bots & planning next backpacking trip</strong></span>
                 </div>
-                <span className="funky-sticker bg-cyan-950/70 text-cyan-300 border border-cyan-500/30">
+                {/* <span className="funky-sticker bg-cyan-950/70 text-cyan-300 border border-cyan-500/30">
                   <Terminal className="h-3.5 w-3.5 text-cyan-400" /> Senior SWE @ Microsoft
                 </span>
                 <span className="funky-sticker bg-amber-950/70 text-amber-300 border border-amber-500/30">
@@ -362,7 +362,7 @@ const Index = () => {
                 </span>
                 <span className="funky-sticker bg-rose-950/70 text-rose-300 border border-rose-500/30">
                   <Cat className="h-3.5 w-3.5 text-rose-400" /> Cat Lover
-                </span>
+                </span> */}
               </div>
 
               {/* Big bold funky headline */}
@@ -373,11 +373,11 @@ const Index = () => {
               </div>
 
               {/* Terminal typing effect badge */}
-              <div className="p-3.5 rounded-xl bg-[#0b1021]/80 border border-cyan-500/25 shadow-lg shadow-cyan-950/50 font-mono text-xs sm:text-sm text-zinc-300 flex items-center gap-2">
+              {/* <div className="p-3.5 rounded-xl bg-[#0b1021]/80 border border-cyan-500/25 shadow-lg shadow-cyan-950/50 font-mono text-xs sm:text-sm text-zinc-300 flex items-center gap-2">
                 <span className="text-cyan-400 font-bold">ujala@work-and-wild:~$</span>
                 <span className="text-white font-medium">{currentPhrase}</span>
                 <span className="animate-pulse text-cyan-400 font-bold">▌</span>
-              </div>
+              </div> */}
 
               {/* Mobile photo inside hero for compact screens */}
               <div className="md:hidden pt-2 pb-2">
