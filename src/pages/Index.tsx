@@ -216,6 +216,57 @@ const Index = () => {
     return () => observerRef.current?.disconnect();
   }, []);
 
+  /* Active section scroll spy */
+  const [activeSection, setActiveSection] = useState<string>("about");
+
+  const navLinks = [
+    { href: "#about", id: "about", label: "About" },
+    { href: "#dual-life", id: "dual-life", label: "Code & Travels" },
+    { href: "#terminal", id: "terminal", label: "Console" },
+    { href: "#gallery", id: "gallery", label: "Polaroids" },
+    { href: "#experience", id: "experience", label: "Experience" },
+    { href: "#awards", id: "awards", label: "Awards" },
+    { href: "#contact", id: "contact", label: "Connect" },
+  ];
+
+  useEffect(() => {
+    const sectionIds = [
+      "about",
+      "dual-life",
+      "terminal",
+      "gallery",
+      "experience",
+      "awards",
+      "contact",
+    ];
+
+    const handleScroll = () => {
+      // If close to bottom of document, activate last section (contact)
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+        setActiveSection("contact");
+        return;
+      }
+
+      const offset = 140; // Height of ticker + navbar + offset
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= offset) {
+            setActiveSection(sectionIds[i]);
+            return;
+          }
+        }
+      }
+      setActiveSection("about");
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const codingSuperpowers = [
     { title: "Generative AI Agents", desc: "Crafting pragmatic LLM agents for risk checks, smart approvals & autonomous release workflows on Azure Cloud." },
     { title: "Fabric Release Automation", desc: "Eliminating release day panic. Engineered rock-solid deployment pipelines and automated diagnostics at Microsoft." },
@@ -274,67 +325,72 @@ const Index = () => {
         <meta property="og:description" content={description} />
       </Helmet>
 
-      {/* ─── FUNKY MARQUEE TICKER ─── */}
-      <div className="fixed top-0 inset-x-0 z-50 bg-[#070a12]/90 backdrop-blur-md border-b border-white/10 overflow-hidden py-1.5 text-xs font-mono">
-        <div className="animate-marquee whitespace-nowrap text-muted-foreground flex items-center gap-8">
-          <span className="flex items-center gap-1.5 text-cyan-400 font-bold"><Zap className="h-3 w-3" /> Senior SWE @ Microsoft</span>
-          <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Backpacker & Solo Traveller</span>
-          <span className="text-zinc-600">•</span>
+      {/* ─── FIXED TOP HEADER: MARQUEE TICKER + NAVBAR ─── */}
+      <div className="fixed top-0 inset-x-0 z-50">
+        {/* Funky Marquee Ticker */}
+        <div className="bg-[#070a12]/95 backdrop-blur-md border-b border-white/10 overflow-hidden py-1.5 text-xs font-mono">
+          <div className="animate-marquee whitespace-nowrap text-muted-foreground flex items-center gap-8">
+            <span className="flex items-center gap-1.5 text-cyan-400 font-bold"><Zap className="h-3 w-3" /> Senior SWE @ Microsoft</span>
+            <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Backpacker & Solo Traveller</span>
+            <span className="text-zinc-600">•</span>
 
-          <span className="flex items-center gap-1.5 text-emerald-400 font-bold"><Code2 className="h-3 w-3" /> Azure GenAI & Release Automation</span>
-          <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-yellow-300 font-bold"><Coffee className="h-3 w-3" /> 100% Filter Coffee-Powered</span>
-          <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-emerald-400 font-bold"><Code2 className="h-3 w-3" /> Azure GenAI & Release Automation</span>
+            <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-yellow-300 font-bold"><Coffee className="h-3 w-3" /> 100% Filter Coffee-Powered</span>
+            <span className="text-zinc-600">•</span>
 
-          <span className="flex items-center gap-1.5 text-rose-400 font-bold"><Cat className="h-3 w-3" /> Cat Lover</span>
-          <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-rose-400 font-bold"><Cat className="h-3 w-3" /> Cat Lover</span>
+            <span className="text-zinc-600">•</span>
 
-          {/* Duplicate for infinite loop */}
-          <span className="flex items-center gap-1.5 text-cyan-400 font-bold"><Zap className="h-3 w-3" /> Senior SWE @ Microsoft</span>
-          <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Backpacker & Solo Traveller</span>
-          <span className="text-zinc-600">•</span>
+            {/* Duplicate for infinite loop */}
+            <span className="flex items-center gap-1.5 text-cyan-400 font-bold"><Zap className="h-3 w-3" /> Senior SWE @ Microsoft</span>
+            <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-amber-400 font-bold"><Compass className="h-3 w-3" /> Backpacker & Solo Traveller</span>
+            <span className="text-zinc-600">•</span>
 
-          <span className="flex items-center gap-1.5 text-emerald-400 font-bold"><Code2 className="h-3 w-3" /> Azure GenAI & Release Automation</span>
-          <span className="text-zinc-600">•</span>
-          <span className="flex items-center gap-1.5 text-yellow-300 font-bold"><Coffee className="h-3 w-3" /> 100% Filter Coffee-Powered</span>
-          <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-emerald-400 font-bold"><Code2 className="h-3 w-3" /> Azure GenAI & Release Automation</span>
+            <span className="text-zinc-600">•</span>
+            <span className="flex items-center gap-1.5 text-yellow-300 font-bold"><Coffee className="h-3 w-3" /> 100% Filter Coffee-Powered</span>
+            <span className="text-zinc-600">•</span>
 
-          <span className="flex items-center gap-1.5 text-rose-400 font-bold"><Cat className="h-3 w-3" /> Cat Lover</span>
-        </div>
-      </div>
-
-      {/* ─── NAVBAR ─── */}
-      <nav className="fixed top-8 inset-x-0 z-40 bg-[#0b0f1c]/90 backdrop-blur-lg border-b border-white/10">
-        <div className="container max-w-6xl mx-auto flex items-center justify-between py-2.5 px-4 gap-2">
-          <a href="#about" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-amber-500 p-[1.5px] transition-transform duration-300 group-hover:scale-110">
-              <div className="h-full w-full bg-[#070a12] rounded-[6px] flex items-center justify-center font-mono font-bold text-xs text-cyan-400">
-                UJ
-              </div>
-            </div>
-            <span className="font-mono text-sm font-semibold tracking-tight text-white group-hover:text-cyan-400 transition-colors hidden sm:inline">
-              ujalajha.me
-            </span>
-          </a>
-
-          {/* Nav links */}
-          <div className="flex items-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-400 overflow-x-auto whitespace-nowrap scrollbar-none py-1">
-            <a href="#about" className="story-link">About</a>
-            <a href="#dual-life" className="story-link text-cyan-400 font-medium">Code & Travels</a>
-            <a href="#terminal" className="story-link">Console</a>
-            <a href="#gallery" className="story-link">Polaroids</a>
-            <a href="#experience" className="story-link">Experience</a>
-            <a href="#awards" className="story-link">Awards</a>
-            <a href="#contact" className="story-link">Connect</a>
+            <span className="flex items-center gap-1.5 text-rose-400 font-bold"><Cat className="h-3 w-3" /> Cat Lover</span>
           </div>
         </div>
-      </nav>
+
+        {/* Navbar */}
+        <nav className="bg-[#0b0f1c]/90 backdrop-blur-lg border-b border-white/10">
+          <div className="container max-w-6xl mx-auto flex items-center justify-between py-2.5 px-4 gap-2">
+            <a href="#about" className="flex items-center gap-2 group flex-shrink-0">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-amber-500 p-[1.5px] transition-transform duration-300 group-hover:scale-110">
+                <div className="h-full w-full bg-[#070a12] rounded-[6px] flex items-center justify-center font-mono font-bold text-xs text-cyan-400">
+                  UJ
+                </div>
+              </div>
+              <span className="font-mono text-sm font-semibold tracking-tight text-white group-hover:text-cyan-400 transition-colors hidden sm:inline">
+                ujalajha.me
+              </span>
+            </a>
+
+            {/* Nav links */}
+            <div className="flex items-center gap-3 md:gap-6 text-xs md:text-sm text-zinc-400 overflow-x-auto whitespace-nowrap scrollbar-none py-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  className={`story-link ${activeSection === link.id ? "active" : ""}`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </nav>
+      </div>
 
       {/* ─── HERO SECTION ─── */}
-      <header className="relative pt-32 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-        <div id="about" className="ambient-spotlight" aria-hidden="true" />
+      <header id="about" className="relative pt-32 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+        <div className="ambient-spotlight" aria-hidden="true" />
 
         <div className="container max-w-6xl lg:max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -1007,7 +1063,7 @@ const Index = () => {
             <Flame className="h-3.5 w-3.5" /> HACKATHONS & WINS
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">Honors & Hackathon Victories</h2>
-          <p className="text-zinc-400 text-sm mt-1">4× Smart India Hackathon wins across consecutive years</p>
+          {/* <p className="text-zinc-400 text-sm mt-1">4× Smart India Hackathon wins across consecutive years</p> */}
         </div>
 
         <div className="relative">
