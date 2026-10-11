@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import type { CarouselApi } from "@/components/ui/carousel";
 
-import preplacedLogo from "@/assets/logos/preplaced.ico";
 import microsoftLogo from "@/assets/logos/microsoft.svg";
 import jpmcLogo from "@/assets/logos/jpmorganchase_logo.jpeg";
 
@@ -68,7 +67,6 @@ const Index = () => {
             url: "https://linkedin.com/in/ujalajha",
             sameAs: [
               "https://linkedin.com/in/ujalajha",
-              "https://preplaced.in/profile/ujala-jha",
               "https://topmate.io/ujalajha"
             ],
             address: {
@@ -110,9 +108,9 @@ const Index = () => {
                 <Card className="shadow-[var(--shadow-soft)]">
                   <CardContent className="p-0">
                     <img
-                      src="/lovable-uploads/727ca543-175e-45ea-985c-fcc2352e70ad.png"
-                      alt="Ujala Jha headshot"
-                      className="w-full h-64 object-cover rounded-lg"
+                      src="/ujala_social_photos/IMG_2726.jpg"
+                      alt="Ujala Jha"
+                      className="w-full h-80 object-cover object-[50%_65%] rounded-lg"
                       loading="lazy"
                     />
                   </CardContent>
@@ -135,12 +133,6 @@ const Index = () => {
                     <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
                   </Button>
                 </a>
-                <a href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer" aria-label="Preplaced">
-                  <Button className="hover-scale" variant="outline">
-                    <img src={preplacedLogo} alt="Preplaced logo" className="h-4 w-4 mr-2" />
-                    Preplaced
-                  </Button>
-                </a>
                 <a href="https://topmate.io/ujalajha" target="_blank" rel="noreferrer" aria-label="Topmate">
                   <Button className="hover-scale" variant="outline">
                     <img src="/lovable-uploads/e9e7b073-4258-4fcd-ba81-a7715a97d655.png" alt="Topmate logo (red roundel)" className="h-4 w-4 mr-2" loading="lazy" />
@@ -156,12 +148,12 @@ const Index = () => {
               </div>
             </div>
             <div className="order-2 md:order-2 md:col-span-5 hidden md:block">
-              <Card className="shadow-[var(--shadow-elevated)]">
-                <CardContent className="p-6">
+              <Card className="shadow-[var(--shadow-elevated)] overflow-hidden">
+                <CardContent className="p-2 sm:p-3">
                   <img
-                    src="/lovable-uploads/727ca543-175e-45ea-985c-fcc2352e70ad.png"
-                    alt="Ujala Jha headshot"
-                    className="w-full h-80 object-cover rounded-lg shadow-[var(--shadow-soft)]"
+                    src="/ujala_social_photos/IMG_2726.jpg"
+                    alt="Ujala Jha"
+                    className="w-full h-[460px] object-cover object-center rounded-lg shadow-[var(--shadow-soft)]"
                     loading="lazy"
                   />
                 </CardContent>
@@ -347,12 +339,6 @@ const Index = () => {
               <a href="https://www.linkedin.com/in/ujalajha" target="_blank" rel="noreferrer">
                 <Button variant="secondary">
                   <Linkedin className="h-4 w-4 mr-2" /> LinkedIn
-                </Button>
-              </a>
-              <a href="https://preplaced.in/profile/ujala-jha" target="_blank" rel="noreferrer" aria-label="Preplaced">
-                <Button variant="outline">
-                  <img src={preplacedLogo} alt="Preplaced logo" className="h-4 w-4 mr-2" />
-                  Preplaced
                 </Button>
               </a>
               <a href="https://topmate.io/ujalajha" target="_blank" rel="noreferrer" aria-label="Topmate">
