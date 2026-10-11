@@ -28,6 +28,11 @@ export interface TravelDestination {
   highlight?: string;
   emoji: string;
   labelAlign?: "left" | "right" | "top" | "bottom";
+  callout?: {
+    dx: number;
+    dy: number;
+    anchor?: "start" | "end" | "middle";
+  };
 }
 
 export const destinations: TravelDestination[] = [
@@ -45,6 +50,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Sukhna Lake evening calm & Rock Garden",
     emoji: "🌲",
     labelAlign: "left",
+    callout: { dx: -55, dy: 18, anchor: "end" },
   },
   {
     id: "manali",
@@ -59,6 +65,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Old Manali vibes, cedar woods & alpine scents",
     emoji: "🏔️",
     labelAlign: "right",
+    callout: { dx: -45, dy: -28, anchor: "end" },
   },
   {
     id: "jibhi",
@@ -73,6 +80,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Jalori Pass hike & untouched rustic charm",
     emoji: "🪵",
     labelAlign: "right",
+    callout: { dx: -50, dy: -12, anchor: "end" },
   },
   {
     id: "chakrata",
@@ -87,6 +95,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Tiger Falls trek & zero tourist hustle",
     emoji: "🧗",
     labelAlign: "left",
+    callout: { dx: 45, dy: -42, anchor: "start" },
   },
   {
     id: "mussoorie",
@@ -101,6 +110,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Mall Road sunset strolls & mountain mist",
     emoji: "🌲",
     labelAlign: "left",
+    callout: { dx: 52, dy: 10, anchor: "start" },
   },
   {
     id: "landour",
@@ -115,6 +125,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Chaar Dukan pancakes & endless pine silence",
     emoji: "🥞",
     labelAlign: "right",
+    callout: { dx: 52, dy: -22, anchor: "start" },
   },
   {
     id: "rishikesh",
@@ -129,6 +140,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Suspension bridges & emerald river banks",
     emoji: "🪔",
     labelAlign: "right",
+    callout: { dx: 48, dy: 32, anchor: "start" },
   },
   {
     id: "delhi",
@@ -157,6 +169,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Sikkimese mountain culture & winding ridges",
     emoji: "🏔️",
     labelAlign: "right",
+    callout: { dx: 45, dy: -18, anchor: "start" },
   },
   {
     id: "darjeeling",
@@ -171,6 +184,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Tiger Hill sunrise & historic colonial paths",
     emoji: "☕",
     labelAlign: "left",
+    callout: { dx: 45, dy: 14, anchor: "start" },
   },
   {
     id: "darbhanga",
@@ -185,6 +199,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Darbhanga Raj Fort, Anand Bagh Palace & Mithila heritage",
     emoji: "🎨",
     labelAlign: "right",
+    callout: { dx: -50, dy: 10, anchor: "end" },
   },
   {
     id: "varanasi",
@@ -243,6 +258,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Mahakaleshwar corridor & Ram Ghat riverside",
     emoji: "🕉️",
     labelAlign: "left",
+    callout: { dx: -45, dy: -14, anchor: "end" },
   },
   {
     id: "indore",
@@ -257,6 +273,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Midnight food crawl at Sarafa Bazaar & Chappan Dukan",
     emoji: "🍲",
     labelAlign: "right",
+    callout: { dx: -45, dy: 18, anchor: "end" },
   },
   {
     id: "dwarka",
@@ -285,6 +302,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Queen's Necklace sunsets & university days",
     emoji: "🏙️",
     labelAlign: "left",
+    callout: { dx: -55, dy: -12, anchor: "end" },
   },
   {
     id: "lonavala",
@@ -299,6 +317,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Tiger Point fog & cascading monsoon waterfalls",
     emoji: "🌧️",
     labelAlign: "left",
+    callout: { dx: -58, dy: 12, anchor: "end" },
   },
   {
     id: "pune",
@@ -313,6 +332,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Vibrant cafés & western ghat gateways",
     emoji: "🎓",
     labelAlign: "right",
+    callout: { dx: 48, dy: -8, anchor: "start" },
   },
   {
     id: "mahabaleshwar",
@@ -326,7 +346,8 @@ export const destinations: TravelDestination[] = [
     vibe: "Fresh strawberry farms, Arthur's Seat cliffs & dense green canopy",
     highlight: "Cliff-edge canyon drop-offs & highland mist",
     emoji: "🍓",
-    labelAlign: "right",
+    labelAlign: "left",
+    callout: { dx: -52, dy: 18, anchor: "end" },
   },
   {
     id: "hyderabad",
@@ -340,7 +361,8 @@ export const destinations: TravelDestination[] = [
     vibe: "Charminar history, aromatic Hyderabadi biryani, Golconda fort echoes & bustling tech hubs",
     highlight: "Golconda Fort acoustics, Charminar chai & Hussain Sagar evening breeze",
     emoji: "🏰",
-    labelAlign: "left",
+    labelAlign: "right",
+    callout: { dx: 48, dy: 16, anchor: "start" },
   },
   {
     id: "warangal",
@@ -355,6 +377,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Kakatiya Kala Thoranam gateway, Warangal Fort & Thousand Pillar Temple",
     emoji: "🛕",
     labelAlign: "right",
+    callout: { dx: 48, dy: -12, anchor: "start" },
   },
   {
     id: "goa",
@@ -369,6 +392,7 @@ export const destinations: TravelDestination[] = [
     highlight: "South Goa secluded coves & warm ocean sunsets",
     emoji: "🏖️",
     labelAlign: "left",
+    callout: { dx: -50, dy: -10, anchor: "end" },
   },
   {
     id: "gokarna",
@@ -383,6 +407,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Om Beach & Kudle Beach ridge walks",
     emoji: "🏖️",
     labelAlign: "left",
+    callout: { dx: -52, dy: 14, anchor: "end" },
   },
 
   // ─── INDIA: SOUTH / COASTAL & WESTERN GHATS ───
@@ -399,6 +424,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Fresh filter coffee estates & Abbey Falls",
     emoji: "☕",
     labelAlign: "left",
+    callout: { dx: -50, dy: -10, anchor: "end" },
   },
   {
     id: "wayanad",
@@ -413,6 +439,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Chembra Peak heart lake views & spice gardens",
     emoji: "🌿",
     labelAlign: "left",
+    callout: { dx: -52, dy: 12, anchor: "end" },
   },
   {
     id: "ooty",
@@ -427,6 +454,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Doddabetta peak & toy train route",
     emoji: "🚂",
     labelAlign: "right",
+    callout: { dx: 45, dy: -5, anchor: "start" },
   },
   {
     id: "pondicherry",
@@ -455,6 +483,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Endless rolling green hills & early morning dew",
     emoji: "🍃",
     labelAlign: "right",
+    callout: { dx: 40, dy: -18, anchor: "start" },
   },
   {
     id: "kochi",
@@ -469,6 +498,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Jew Town antique alleys & harbor ferries",
     emoji: "🎣",
     labelAlign: "left",
+    callout: { dx: -52, dy: -12, anchor: "end" },
   },
   {
     id: "madurai",
@@ -483,6 +513,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Meenakshi Amman architecture marvel",
     emoji: "🛕",
     labelAlign: "right",
+    callout: { dx: 48, dy: 10, anchor: "start" },
   },
   {
     id: "alleppey",
@@ -497,6 +528,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Gliding through backwaters with fresh filter coffee",
     emoji: "🛶",
     labelAlign: "left",
+    callout: { dx: -55, dy: 8, anchor: "end" },
   },
   {
     id: "rameshwaram",
@@ -511,6 +543,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Pamban Sea Bridge crossing & Ram Setu waters",
     emoji: "🌉",
     labelAlign: "right",
+    callout: { dx: 38, dy: 28, anchor: "start" },
   },
   {
     id: "varkala",
@@ -525,6 +558,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Cliff walkway cafés, ocean yoga & turquoise waves",
     emoji: "🌅",
     labelAlign: "left",
+    callout: { dx: -50, dy: 24, anchor: "end" },
   },
 
   // ─── VIETNAM: SOUTHEAST ASIA ODYSSEY ───
@@ -555,6 +589,7 @@ export const destinations: TravelDestination[] = [
     highlight: "My Khe Beach breeze & Ba Na Hills",
     emoji: "🐉",
     labelAlign: "right",
+    callout: { dx: -45, dy: -12, anchor: "end" },
   },
   {
     id: "hoian",
@@ -569,6 +604,7 @@ export const destinations: TravelDestination[] = [
     highlight: "Floating candle lanterns on Thu Bon river",
     emoji: "🏮",
     labelAlign: "right",
+    callout: { dx: 45, dy: 12, anchor: "start" },
   },
   {
     id: "hochiminh",
@@ -844,6 +880,63 @@ export const TravelMap: React.FC = () => {
                     <feGaussianBlur stdDeviation="3" result="blur" />
                     <feComposite in="SourceGraphic" in2="blur" operator="over" />
                   </filter>
+
+                  {/* Arrowhead Markers for Outward Callouts */}
+                  <marker
+                    id="callout-arrow-mountains"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ffbe0b" />
+                  </marker>
+                  <marker
+                    id="callout-arrow-coastal"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#00f5d4" />
+                  </marker>
+                  <marker
+                    id="callout-arrow-hills"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#10b981" />
+                  </marker>
+                  <marker
+                    id="callout-arrow-heritage"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#f72585" />
+                  </marker>
+                  <marker
+                    id="callout-arrow-white"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ffffff" />
+                  </marker>
                 </defs>
 
                 {/* Classic India State Map Image Layer */}
@@ -875,12 +968,71 @@ export const TravelMap: React.FC = () => {
                   const isSelected = selectedDest?.id === dest.id;
                   const isMountain = dest.category === "mountains";
                   const isCoastal = dest.category === "coastal";
+                  const isHills = dest.category === "hills";
 
-                  const pinColor = isMountain ? "#ffbe0b" : isCoastal ? "#00f5d4" : "#f72585";
-                  const isLeft = dest.labelAlign === "left";
+                  const pinColor = isMountain ? "#ffbe0b" : isCoastal ? "#00f5d4" : isHills ? "#10b981" : "#f72585";
+                  const markerKey = isSelected ? "white" : dest.category;
 
-                  const textX = isLeft ? pt.x - 10 : pt.x + 10;
-                  const textAnchor = isLeft ? "end" : "start";
+                  const hasCallout = Boolean(dest.callout);
+                  let labelX = pt.x + 10;
+                  let labelY = pt.y + 4;
+                  let textAnchor: "start" | "end" = "start";
+
+                  if (dest.callout) {
+                    labelX = pt.x + dest.callout.dx;
+                    labelY = pt.y + dest.callout.dy;
+                    textAnchor = dest.callout.anchor === "end" || dest.callout.dx < 0 ? "end" : "start";
+                  } else if (dest.labelAlign === "left") {
+                    labelX = pt.x - 10;
+                    textAnchor = "end";
+                  }
+
+                  let leaderLine = null;
+                  if (dest.callout) {
+                    const lineStartX = textAnchor === "end" ? labelX + 4 : labelX - 4;
+                    const lineStartY = labelY - 3;
+                    const vdx = pt.x - lineStartX;
+                    const vdy = pt.y - lineStartY;
+                    const dist = Math.hypot(vdx, vdy);
+                    // Arrow stops 6.5px before pin center
+                    const arrowEndX = dist > 6.5 ? pt.x - (vdx / dist) * 6.5 : pt.x;
+                    const arrowEndY = dist > 6.5 ? pt.y - (vdy / dist) * 6.5 : pt.y;
+
+                    leaderLine = (
+                      <g className="pointer-events-none transition-all duration-300">
+                        {isSelected && (
+                          <line
+                            x1={lineStartX}
+                            y1={lineStartY}
+                            x2={arrowEndX}
+                            y2={arrowEndY}
+                            stroke={pinColor}
+                            strokeWidth="3.5"
+                            opacity="0.4"
+                            filter="url(#glowFilter)"
+                          />
+                        )}
+                        <line
+                          x1={lineStartX}
+                          y1={lineStartY}
+                          x2={arrowEndX}
+                          y2={arrowEndY}
+                          stroke={isSelected ? "#ffffff" : pinColor}
+                          strokeWidth={isSelected ? 1.8 : 1.2}
+                          strokeDasharray={isSelected ? "none" : "3 2"}
+                          opacity={isSelected ? 1 : 0.75}
+                          markerEnd={`url(#callout-arrow-${markerKey})`}
+                        />
+                        <circle
+                          cx={lineStartX}
+                          cy={lineStartY}
+                          r={isSelected ? 2.5 : 1.8}
+                          fill={isSelected ? "#ffffff" : pinColor}
+                          opacity={0.85}
+                        />
+                      </g>
+                    );
+                  }
 
                   return (
                     <g
@@ -888,13 +1040,16 @@ export const TravelMap: React.FC = () => {
                       className="cursor-pointer transition-transform duration-300"
                       onClick={() => handleSelect(dest)}
                     >
+                      {/* Outward arrow leader line if crowded */}
+                      {leaderLine}
+
                       {/* Outer pulse beacon */}
                       {isSelected ? (
                         <>
                           <circle
                             cx={pt.x}
                             cy={pt.y}
-                            r="22"
+                            r={hasCallout ? 20 : 22}
                             fill="none"
                             stroke={pinColor}
                             strokeWidth="2"
@@ -903,7 +1058,7 @@ export const TravelMap: React.FC = () => {
                           <circle
                             cx={pt.x}
                             cy={pt.y}
-                            r="14"
+                            r={14}
                             fill={pinColor}
                             fillOpacity="0.3"
                           />
@@ -912,7 +1067,7 @@ export const TravelMap: React.FC = () => {
                         <circle
                           cx={pt.x}
                           cy={pt.y}
-                          r="9"
+                          r={9}
                           fill={pinColor}
                           fillOpacity="0.18"
                           className="hover:scale-150 transition-transform"
@@ -931,8 +1086,8 @@ export const TravelMap: React.FC = () => {
 
                       {/* City Label Tag with shadow for readability */}
                       <text
-                        x={textX}
-                        y={pt.y + 4}
+                        x={labelX}
+                        y={labelY}
                         textAnchor={textAnchor}
                         fill="#060912"
                         stroke="#060912"
@@ -946,8 +1101,8 @@ export const TravelMap: React.FC = () => {
                         {dest.name}
                       </text>
                       <text
-                        x={textX}
-                        y={pt.y + 4}
+                        x={labelX}
+                        y={labelY}
                         textAnchor={textAnchor}
                         fill={isSelected ? "#ffffff" : "#e4e4e7"}
                         fontSize={isSelected ? "13" : "10.5"}
@@ -970,6 +1125,31 @@ export const TravelMap: React.FC = () => {
                 className="w-full h-full select-none"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                <defs>
+                  <marker
+                    id="callout-arrow-vietnam"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#f72585" />
+                  </marker>
+                  <marker
+                    id="callout-arrow-vietnam-white"
+                    viewBox="0 0 10 10"
+                    refX="7"
+                    refY="5"
+                    markerWidth="5"
+                    markerHeight="5"
+                    orient="auto"
+                  >
+                    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ffffff" />
+                  </marker>
+                </defs>
+
                 {/* Stylized Vietnam S-Curve Contour */}
                 <path
                   d="M 230 70
@@ -1005,27 +1185,74 @@ export const TravelMap: React.FC = () => {
                   const pt = projectVietnam(dest.lat, dest.lng);
                   const isSelected = selectedDest?.id === dest.id;
 
+                  let labelX = pt.x + 11;
+                  let labelY = pt.y + 4.5;
+                  let textAnchor: "start" | "end" = "start";
+
+                  if (dest.callout) {
+                    labelX = pt.x + dest.callout.dx;
+                    labelY = pt.y + dest.callout.dy;
+                    textAnchor = dest.callout.anchor === "end" || dest.callout.dx < 0 ? "end" : "start";
+                  }
+
+                  let leaderLine = null;
+                  if (dest.callout) {
+                    const lineStartX = textAnchor === "end" ? labelX + 4 : labelX - 4;
+                    const lineStartY = labelY - 3;
+                    const vdx = pt.x - lineStartX;
+                    const vdy = pt.y - lineStartY;
+                    const dist = Math.hypot(vdx, vdy);
+                    const arrowEndX = dist > 6.5 ? pt.x - (vdx / dist) * 6.5 : pt.x;
+                    const arrowEndY = dist > 6.5 ? pt.y - (vdy / dist) * 6.5 : pt.y;
+
+                    leaderLine = (
+                      <g className="pointer-events-none transition-all duration-300">
+                        <line
+                          x1={lineStartX}
+                          y1={lineStartY}
+                          x2={arrowEndX}
+                          y2={arrowEndY}
+                          stroke={isSelected ? "#ffffff" : "#f72585"}
+                          strokeWidth={isSelected ? 1.8 : 1.2}
+                          strokeDasharray={isSelected ? "none" : "3 2"}
+                          opacity={isSelected ? 1 : 0.75}
+                          markerEnd={`url(#callout-arrow-vietnam${isSelected ? "-white" : ""})`}
+                        />
+                        <circle
+                          cx={lineStartX}
+                          cy={lineStartY}
+                          r={isSelected ? 2.5 : 1.8}
+                          fill={isSelected ? "#ffffff" : "#f72585"}
+                          opacity={0.85}
+                        />
+                      </g>
+                    );
+                  }
+
                   return (
                     <g
                       key={dest.id}
                       className="cursor-pointer transition-transform duration-300"
                       onClick={() => handleSelect(dest)}
                     >
+                      {/* Leader line for Vietnam callouts */}
+                      {leaderLine}
+
                       {isSelected ? (
                         <>
                           <circle
                             cx={pt.x}
                             cy={pt.y}
-                            r="22"
+                            r={22}
                             fill="none"
                             stroke="#f72585"
                             strokeWidth="2"
                             className="animate-ping origin-center opacity-75"
                           />
-                          <circle cx={pt.x} cy={pt.y} r="15" fill="#f72585" fillOpacity="0.3" />
+                          <circle cx={pt.x} cy={pt.y} r={15} fill="#f72585" fillOpacity="0.3" />
                         </>
                       ) : (
-                        <circle cx={pt.x} cy={pt.y} r="9" fill="#f72585" fillOpacity="0.2" />
+                        <circle cx={pt.x} cy={pt.y} r={9} fill="#f72585" fillOpacity="0.2" />
                       )}
 
                       <circle
@@ -1038,8 +1265,9 @@ export const TravelMap: React.FC = () => {
                       />
 
                       <text
-                        x={pt.x + 11}
-                        y={pt.y + 4.5}
+                        x={labelX}
+                        y={labelY}
+                        textAnchor={textAnchor}
                         fill="#060912"
                         stroke="#060912"
                         strokeWidth="3"
@@ -1052,8 +1280,9 @@ export const TravelMap: React.FC = () => {
                         {dest.name}
                       </text>
                       <text
-                        x={pt.x + 11}
-                        y={pt.y + 4.5}
+                        x={labelX}
+                        y={labelY}
+                        textAnchor={textAnchor}
                         fill={isSelected ? "#ffffff" : "#f472b6"}
                         fontSize={isSelected ? "13" : "11"}
                         fontWeight={isSelected ? "bold" : "600"}
