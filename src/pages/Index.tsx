@@ -221,11 +221,11 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState<string>("about");
 
   const navLinks = [
-    { href: "#about", id: "about", label: "About" },
+    { href: "#about", id: "about", label: "Whoami" },
     // { href: "#dual-life", id: "dual-life", label: "Code & Travels" },
     { href: "#experience", id: "experience", label: "Work" },
-    { href: "#awards", id: "awards", label: "Awards" },
-    { href: "#travel-map", id: "travel-map", label: "Travels" },
+    { href: "#awards", id: "awards", label: "Wins" },
+    { href: "#travel-map", id: "travel-map", label: "Wanders" },
     { href: "#gallery", id: "gallery", label: "Candids" },
     // { href: "#terminal", id: "terminal", label: "Console" },
     { href: "#contact", id: "contact", label: "Connect" },
@@ -612,7 +612,7 @@ const Index = () => {
       <div className="section-divider" />
 
       {/* ─── THE DUAL LIFE: CODE & WANDERLUST ─── */}
-      <section id="dual-life" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
+      {/* <section id="dual-life" className="container max-w-6xl mx-auto px-4 py-20 scroll-reveal opacity-0">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-cyan-400 mb-3">
             <Sparkles className="h-3.5 w-3.5" /> DUAL OPERATING SYSTEM
@@ -626,7 +626,7 @@ const Index = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* THE CODER DECK */}
+         
           <div className="rounded-2xl p-6 sm:p-8 bg-[#0b1021]/80 border-2 border-cyan-500/30 relative overflow-hidden group hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_35px_rgba(0,245,212,0.15)]">
             <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -670,7 +670,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* THE EXPLORER DECK */}
+          
           <div className="rounded-2xl p-6 sm:p-8 bg-[#140f1a]/80 border-2 border-amber-500/30 relative overflow-hidden group hover:border-amber-400 transition-all duration-300 hover:shadow-[0_0_35px_rgba(255,190,11,0.15)]">
             <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -714,7 +714,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <div className="section-divider" />
 
@@ -848,61 +848,7 @@ const Index = () => {
         </div>
       </section>
 
-      <div className="section-divider" />
 
-      {/* ─── SKILLS & TOOLBELT ─── */}
-      <section id="skills" className="container max-w-5xl mx-auto px-4 py-20 scroll-reveal opacity-0">
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Engineering Tech Stack */}
-          <div>
-            <div className="flex items-center gap-2.5 mb-6">
-              <Code2 className="h-5 w-5 text-cyan-400" />
-              <h2 className="text-2xl font-bold text-white">Engineering Toolbelt</h2>
-            </div>
-            <div className="flex flex-wrap gap-2.5">
-              {skills.map((s) => (
-                <span key={s} className="skill-tag">{s}</span>
-              ))}
-            </div>
-
-            <div className="mt-8">
-              <div className="flex items-center gap-2 mb-3">
-                <Award className="h-4 w-4 text-amber-400" />
-                <h3 className="text-sm font-mono font-bold uppercase text-amber-400">Certifications</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "AWS Certified Cloud Practitioner",
-                  "AWS Certified Developer – Associate",
-                  "Java Programming",
-                  "Developing with Spark & Hadoop",
-                ].map((c) => (
-                  <span key={c} className="cert-tag">{c}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Nomad & Survival Skills */}
-          <div>
-            <div className="flex items-center gap-2.5 mb-6">
-              <Compass className="h-5 w-5 text-amber-400" />
-              <h2 className="text-2xl font-bold text-white">Nomad & Life Quests</h2>
-            </div>
-            <div className="flex flex-wrap gap-2.5">
-              {travelSkills.map((s) => (
-                <span key={s} className="cert-tag">{s}</span>
-              ))}
-            </div>
-
-            {/* Travel Quote card */}
-            <div className="mt-8 p-5 rounded-xl bg-amber-950/20 border border-amber-500/20 text-xs sm:text-sm text-zinc-300 leading-relaxed font-mono">
-              <span className="text-amber-400 font-bold block mb-1">TRAVEL MANIFESTO:</span>
-              "Pack light, transition from beach waves to mountain peaks, befriend every street cat, and always fuel up with strong filter coffee."
-            </div>
-          </div>
-        </div>
-      </section>
 
       <div className="section-divider" />
 
@@ -957,6 +903,75 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <div className="section-divider" />
+
+      {/* ─── SKILLS & TOOLBELT ─── */}
+      <section id="skills" className="container max-w-5xl mx-auto px-4 py-20 scroll-reveal opacity-0">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-cyan-400 mb-3">
+            <Sparkles className="h-3.5 w-3.5" /> DUAL OPERATING SYSTEM
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+            The Coder <span className="text-gradient-funky">&</span> The Explorer
+          </h2>
+          <p className="mt-3 text-zinc-400 text-sm sm:text-base">
+            Two sides of the same curious mind: solving complex distributed systems during the week, and exploring new horizons while backpacking on the weekends.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Engineering Tech Stack */}
+          <div>
+            <div className="flex items-center gap-2.5 mb-6">
+              <Code2 className="h-5 w-5 text-cyan-400" />
+              <h2 className="text-2xl font-bold text-white">Engineering Toolbelt</h2>
+            </div>
+            <div className="flex flex-wrap gap-2.5">
+              {skills.map((s) => (
+                <span key={s} className="skill-tag">{s}</span>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <div className="flex items-center gap-2 mb-3">
+                <Award className="h-4 w-4 text-amber-400" />
+                <h3 className="text-sm font-mono font-bold uppercase text-amber-400">Certifications</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "AWS Certified Cloud Practitioner",
+                  "AWS Certified Developer – Associate",
+                  "Java Programming",
+                  "Developing with Spark & Hadoop",
+                ].map((c) => (
+                  <span key={c} className="cert-tag">{c}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Nomad & Survival Skills */}
+          <div>
+            <div className="flex items-center gap-2.5 mb-6">
+              <Compass className="h-5 w-5 text-amber-400" />
+              <h2 className="text-2xl font-bold text-white">Nomad & Life Quests</h2>
+            </div>
+            <div className="flex flex-wrap gap-2.5">
+              {travelSkills.map((s) => (
+                <span key={s} className="cert-tag">{s}</span>
+              ))}
+            </div>
+
+            {/* Travel Quote card */}
+            <div className="mt-8 p-5 rounded-xl bg-amber-950/20 border border-amber-500/20 text-xs sm:text-sm text-zinc-300 leading-relaxed font-mono">
+              <span className="text-amber-400 font-bold block mb-1">TRAVEL MANIFESTO:</span>
+              "Pack light, transition from beach waves to mountain peaks, befriend every street cat, and always fuel up with strong filter coffee."
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       <div className="section-divider" />
 
