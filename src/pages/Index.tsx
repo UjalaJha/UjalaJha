@@ -336,43 +336,37 @@ const Index = () => {
       <header className="relative pt-32 pb-16 md:pt-36 md:pb-24 overflow-hidden">
         <div id="about" className="ambient-spotlight" aria-hidden="true" />
 
-        <div className="container max-w-6xl mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-12 gap-8 items-center">
+        <div className="container max-w-6xl lg:max-w-7xl mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: Title & Punchy Story */}
-            <div className="order-1 md:col-span-7 space-y-4">
-              {/* Status pill & stickers row right together */}
+            <div className="order-1 md:col-span-7 space-y-6">
+              {/* Status pill row */}
               <div className="flex flex-wrap items-center gap-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-400">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-400">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                   </span>
                   <span>Status: <strong className="text-white">Shipping bots & planning next backpacking</strong></span>
                 </div>
-                {/* <span className="funky-sticker bg-cyan-950/70 text-cyan-300 border border-cyan-500/30">
-                  <Terminal className="h-3.5 w-3.5 text-cyan-400" /> Senior SWE @ Microsoft
-                </span>
-                <span className="funky-sticker bg-amber-950/70 text-amber-300 border border-amber-500/30">
-                  <Compass className="h-3.5 w-3.5 text-amber-400" /> Backpacker & Solo Traveller
-                </span>
-                <span className="funky-sticker bg-rose-950/70 text-rose-300 border border-rose-500/30">
-                  <Cat className="h-3.5 w-3.5 text-rose-400" /> Cat Lover
-                </span> */}
               </div>
 
-              {/* Big bold funky headline */}
-              <div>
-                <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+              {/* Big bold funky headline & role tagline */}
+              <div className="space-y-2">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08]">
                   Hey, I'm <span className="text-gradient-funky">Ujala!</span>
                 </h1>
+                <p className="text-base sm:text-lg text-zinc-300 font-normal flex flex-wrap items-center gap-2.5 pt-1">
+                  <span className="inline-flex items-center gap-2">
+                    <img src={microsoftLogo} alt="Microsoft Logo" className="h-4 w-4 shrink-0 inline-block shadow-sm" />
+                    <span>Senior SWE @ <strong className="text-white font-semibold">Microsoft</strong></span>
+                  </span>
+                  {/* <span className="text-zinc-600 hidden sm:inline">&bull;</span> */}
+                  {/* <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 font-mono text-xs font-semibold">
+                    <Compass className="h-3 w-3 text-cyan-400" /> Wandering Variable
+                  </span> */}
+                </p>
               </div>
-
-              {/* Terminal typing effect badge */}
-              {/* <div className="p-3.5 rounded-xl bg-[#0b1021]/80 border border-cyan-500/25 shadow-lg shadow-cyan-950/50 font-mono text-xs sm:text-sm text-zinc-300 flex items-center gap-2">
-                <span className="text-cyan-400 font-bold">ujala@work-and-wild:~$</span>
-                <span className="text-white font-medium">{currentPhrase}</span>
-                <span className="animate-pulse text-cyan-400 font-bold">▌</span>
-              </div> */}
 
               {/* Mobile photo inside hero for compact screens */}
               <div className="md:hidden pt-2 pb-2">
@@ -393,29 +387,35 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Funky punchy bio cards */}
-              <div className="grid sm:grid-cols-2 gap-3 text-sm">
-                <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors">
-                  <div className="flex items-center gap-2 text-cyan-300 font-mono font-bold text-xs uppercase mb-1.5">
-                    <Laptop className="h-4 w-4" /> The Coding Side
+              {/* Spacious dual-side bio cards */}
+              <div className="space-y-3.5">
+                <div className="p-4 sm:p-5 rounded-2xl bg-cyan-950/20 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:bg-cyan-950/30">
+                  <div className="flex items-center justify-between text-cyan-300 font-mono font-bold text-xs uppercase mb-2">
+                    <span className="flex items-center gap-2">
+                      <Laptop className="h-4 w-4 text-cyan-400" /> The Coding Side
+                    </span>
+                    <span className="text-zinc-500 text-[11px] font-mono tracking-wider hidden sm:inline">AI &amp; Cloud Scale</span>
                   </div>
-                  <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
-                    Building autonomous AI agents and release frameworks for <strong className="text-white">Microsoft Fabric</strong>. Previously ran AWS petabyte pipelines at <strong className="text-white">JPMorgan Chase</strong>. 20+ hackathons won & mentored!
+                  <p className="text-zinc-300 text-sm sm:text-[14.5px] leading-relaxed">
+                    Building autonomous AI agents and release frameworks for <strong className="text-white font-semibold">Microsoft Fabric</strong>. Previously ran AWS petabyte pipelines at <strong className="text-white font-semibold">JPMorgan Chase</strong>. 20+ hackathons won &amp; mentored!
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-500/20 hover:border-amber-500/40 transition-colors">
-                  <div className="flex items-center gap-2 text-amber-300 font-mono font-bold text-xs uppercase mb-1.5">
-                    <Compass className="h-4 w-4" /> The Wandering Side
+                <div className="p-4 sm:p-5 rounded-2xl bg-amber-950/20 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:bg-amber-950/30">
+                  <div className="flex items-center justify-between text-amber-300 font-mono font-bold text-xs uppercase mb-2">
+                    <span className="flex items-center gap-2">
+                      <Compass className="h-4 w-4 text-amber-400" /> The Wandering Side
+                    </span>
+                    <span className="text-zinc-500 text-[11px] font-mono tracking-wider hidden sm:inline">Passes &amp; Trails</span>
                   </div>
-                  <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
-                    A self-proclaimed <strong className="text-white">beach person transitioning into a mountain person</strong>. Solo-backpacking, adult learner playing <strong className="text-white">badminton</strong> 🏸, unabashed <strong className="text-white">cat lover</strong> 🐱, and fueled by <strong className="text-white">filter coffee</strong> ☕
+                  <p className="text-zinc-300 text-sm sm:text-[14.5px] leading-relaxed">
+                    A self-proclaimed <strong className="text-white font-semibold">beach person transitioning into a mountain person</strong>. Solo-backpacking, adult learner playing <strong className="text-white font-semibold">badminton</strong> 🏸, unabashed <strong className="text-white font-semibold">cat lover</strong> 🐱, and fueled by <strong className="text-white font-semibold">filter coffee</strong> ☕
                   </p>
                 </div>
               </div>
 
               {/* CTA Action Buttons */}
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-3 pt-3">
                 <a href="mailto:jhaujala3@gmail.com" aria-label="Email Ujala">
                   <Button className="hover-scale bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-bold px-5">
                     <Mail className="h-4 w-4 mr-2" /> Say Hello
