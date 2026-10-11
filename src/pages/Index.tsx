@@ -36,7 +36,6 @@ import microsoftLogo from "@/assets/logos/microsoft.svg";
 import jpmcLogo from "@/assets/logos/jpmorganchase_logo.jpeg";
 
 const Index = () => {
-  const [activeMode, setActiveMode] = useState<"all" | "code" | "travel">("all");
   const [terminalCommand, setTerminalCommand] = useState<string>("ujala.getVibe()");
   const [terminalOutput, setTerminalOutput] = useState<string>(
     `{\n  "role": "Senior SWE @ Microsoft",\n  "aka": "Wandering Variable",\n  "status": "Shipping Fabric release bots by day 🤖",\n  "weekend_mode": "Solo backpacking & beach-to-mountain transitions 🌊➔🏔️",\n  "fuel": "Filter Coffee + 90s playlists ☕",\n  "sidequests": ["Adult Learner: Badminton 🏸", "Cat Lover 🐱"]\n}`
@@ -339,38 +338,30 @@ const Index = () => {
       </nav>
 
       {/* ─── HERO SECTION ─── */}
-      <header className="relative pt-36 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+      <header className="relative pt-24 pb-16 md:pt-28 md:pb-24 overflow-hidden">
         <div id="about" className="ambient-spotlight" aria-hidden="true" />
 
         <div className="container max-w-6xl mx-auto px-4 relative z-10">
-          {/* Top Funky Mode Badges */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
-            {/* Quick status pill */}
-            <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-400">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span>Status: <strong className="text-white">Shipping bots & planning next backpacking trip</strong></span>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-12 gap-10 items-center">
+          <div className="grid md:grid-cols-12 gap-8 items-center">
             {/* Left Column: Title & Punchy Story */}
-            <div className="order-1 md:col-span-7 space-y-6">
-              {/* Funky stickers row */}
-              <div className="flex flex-wrap gap-2 pt-2">
+            <div className="order-1 md:col-span-7 space-y-4">
+              {/* Status pill & stickers row right together */}
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-400">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  </span>
+                  <span>Status: <strong className="text-white">Shipping bots & planning next backpacking trip</strong></span>
+                </div>
                 <span className="funky-sticker bg-cyan-950/70 text-cyan-300 border border-cyan-500/30">
                   <Terminal className="h-3.5 w-3.5 text-cyan-400" /> Senior SWE @ Microsoft
                 </span>
                 <span className="funky-sticker bg-amber-950/70 text-amber-300 border border-amber-500/30">
-                  <Compass className="h-3.5 w-3.5 text-amber-400" /> Solo Backpacker & Traveller
+                  <Compass className="h-3.5 w-3.5 text-amber-400" /> Backpacker & Solo Traveller
                 </span>
                 <span className="funky-sticker bg-rose-950/70 text-rose-300 border border-rose-500/30">
                   <Cat className="h-3.5 w-3.5 text-rose-400" /> Cat Lover
-                </span>
-                <span className="funky-sticker bg-pink-950/70 text-pink-300 border border-pink-500/30">
-                  <Award className="h-3.5 w-3.5 text-pink-400" /> 4× SIH + Fabric '26
                 </span>
               </div>
 
@@ -379,17 +370,6 @@ const Index = () => {
                 <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
                   Hey, I'm <span className="text-gradient-funky">Ujala!</span>
                 </h1>
-                <div className="mt-2.5 flex items-center gap-2 flex-wrap">
-                  <span className="px-3 py-1 rounded-lg bg-amber-500/10 border border-amber-400/30 font-mono text-base sm:text-lg font-bold text-amber-400 shadow-sm">
-                    ~ Wandering Variable
-                  </span>
-                </div>
-                <p className="mt-3 text-lg md:text-xl font-medium text-zinc-300 flex items-center gap-2 flex-wrap">
-                  <span>Coder by day</span>
-                  <span className="text-cyan-400 font-bold">⚡</span>
-                  <span>Wanderer by weekend</span>
-                  <span className="text-amber-400 font-bold">🎒</span>
-                </p>
               </div>
 
               {/* Terminal typing effect badge */}
@@ -434,7 +414,7 @@ const Index = () => {
                     <Compass className="h-4 w-4" /> The Wandering Side
                   </div>
                   <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
-                    A self-proclaimed <strong className="text-white">beach person transitioning into a mountain person</strong>. Solo-backpacking, adult learner playing <strong className="text-white">badminton</strong> 🏸, unabashed <strong className="text-white">cat lover</strong> 🐱, and fueled by <strong className="text-white">filter coffee</strong> ☕.
+                    A self-proclaimed <strong className="text-white">beach person transitioning into a mountain person</strong>. Solo-backpacking, adult learner playing <strong className="text-white">badminton</strong> 🏸, unabashed <strong className="text-white">cat lover</strong> 🐱, and fueled by <strong className="text-white">filter coffee</strong> ☕
                   </p>
                 </div>
               </div>
@@ -491,7 +471,7 @@ const Index = () => {
 
                   {/* Stamp top right */}
                   <div className="absolute -top-3 -right-3 z-20 stamp-badge bg-[#070a12] text-cyan-300 border-cyan-400 shadow-lg rotate-12">
-                    <Footprints className="h-3.5 w-3.5" /> SOLO EXPLORER
+                    <Footprints className="h-3.5 w-3.5" />EXPLORER
                   </div>
 
                   <div className="relative rounded-xl overflow-hidden">
@@ -507,7 +487,7 @@ const Index = () => {
                     <div className="absolute bottom-4 left-4 right-4 space-y-2">
                       <div className="flex items-center justify-between text-xs font-mono text-white/90">
                         <span className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
-                          <MapPin className="h-3 w-3 text-amber-400" /> Elevation: 2800m
+                          <MapPin className="h-3 w-3 text-amber-400" /> Elevation: 2200m
                         </span>
                         <span className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 text-emerald-300">
                           <Zap className="h-3 w-3" /> Oxygen 100%
