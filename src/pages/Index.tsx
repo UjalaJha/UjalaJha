@@ -222,12 +222,12 @@ const Index = () => {
 
   const navLinks = [
     { href: "#about", id: "about", label: "About" },
-    { href: "#dual-life", id: "dual-life", label: "Code & Travels" },
-    { href: "#experience", id: "experience", label: "Experience" },
+    // { href: "#dual-life", id: "dual-life", label: "Code & Travels" },
+    { href: "#experience", id: "experience", label: "Work" },
     { href: "#awards", id: "awards", label: "Awards" },
-    { href: "#travel-map", id: "travel-map", label: "Travel Map" },
-    { href: "#gallery", id: "gallery", label: "Polaroids" },
-    { href: "#terminal", id: "terminal", label: "Console" },
+    { href: "#travel-map", id: "travel-map", label: "Travels" },
+    { href: "#gallery", id: "gallery", label: "Candids" },
+    // { href: "#terminal", id: "terminal", label: "Console" },
     { href: "#contact", id: "contact", label: "Connect" },
   ];
 
