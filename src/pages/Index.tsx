@@ -466,6 +466,15 @@ const Index = () => {
                     <Instagram className="h-4 w-4 mr-2 text-pink-400" /> Travel Gram
                   </Button>
                 </a>
+                <a href="https://www.techroast.online/" target="_blank" rel="noreferrer">
+                  <Button className="hover-scale glass-card border-white/10 text-white hover:border-pink-500/50" variant="outline">
+                    <img
+                      src="/lovable-uploads/favicon.png"
+                      alt="Brutal Startup Roast"
+                      className="h-4 w-4 mr-2"
+                    /> Get Roasted
+                  </Button>
+                </a>
               </div>
             </div>
 
