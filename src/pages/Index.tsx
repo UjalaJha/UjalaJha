@@ -492,7 +492,7 @@ const Index = () => {
                     1:1 Mentorship
                   </Button>
                 </a>
-                <a href="https://www.instagram.com/indie.butterfly/" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/wandering.variable/" target="_blank" rel="noreferrer">
                   <Button className="hover-scale glass-card border-white/10 text-white hover:border-pink-500/50" variant="outline">
                     <Instagram className="h-4 w-4 mr-2 text-pink-400" /> Travel Gram
                   </Button>
@@ -1151,7 +1151,7 @@ const Index = () => {
                   Topmate 1:1
                 </Button>
               </a>
-              <a href="https://www.instagram.com/indie.butterfly/" target="_blank" rel="noreferrer">
+              <a href="https://www.instagram.com/wandering.variable/" target="_blank" rel="noreferrer">
                 <Button className="hover-scale glass-card text-white hover:border-pink-400/50" variant="outline">
                   <Instagram className="h-4 w-4 mr-2 text-pink-400" /> Instagram
                 </Button>
