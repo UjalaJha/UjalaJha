@@ -475,7 +475,7 @@ const Index = () => {
 
               {/* CTA Action Buttons */}
               <div className="flex flex-wrap items-center gap-3 pt-3">
-                <a href="mailto:jhaujala3@gmail.com" aria-label="Email Ujala">
+                <a href="mailto:jhaujalas@gmail.com" aria-label="Email Ujala">
                   <Button className="hover-scale bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-bold px-5">
                     <Mail className="h-4 w-4 mr-2" /> Say Hello
                   </Button>
@@ -1155,9 +1155,9 @@ const Index = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <a href="mailto:jhaujala3@gmail.com">
+              <a href="mailto:jhaujalas@gmail.com">
                 <Button className="hover-scale bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold px-6 py-2.5">
-                  <Mail className="h-4 w-4 mr-2" /> jhaujala3@gmail.com
+                  <Mail className="h-4 w-4 mr-2" /> Email Me
                 </Button>
               </a>
               <a href="https://www.linkedin.com/in/ujalajha" target="_blank" rel="noreferrer">

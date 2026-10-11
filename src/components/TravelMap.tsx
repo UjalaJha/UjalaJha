@@ -329,6 +329,34 @@ export const destinations: TravelDestination[] = [
     labelAlign: "right",
   },
   {
+    id: "hyderabad",
+    name: "Hyderabad",
+    stateOrRegion: "Telangana",
+    country: "India",
+    category: "heritage",
+    lat: 17.385,
+    lng: 78.4867,
+    altitudeOrTag: "City of Pearls • Deccan Plateau",
+    vibe: "Charminar history, aromatic Hyderabadi biryani, Golconda fort echoes & bustling tech hubs",
+    highlight: "Golconda Fort acoustics, Charminar chai & Hussain Sagar evening breeze",
+    emoji: "🏰",
+    labelAlign: "left",
+  },
+  {
+    id: "warangal",
+    name: "Warangal",
+    stateOrRegion: "Telangana",
+    country: "India",
+    category: "heritage",
+    lat: 17.9784,
+    lng: 79.5941,
+    altitudeOrTag: "Kakatiya Heritage Capital",
+    vibe: "Kakatiya stone arches, Thousand Pillar Temple architecture & serene Ramappa lake",
+    highlight: "Kakatiya Kala Thoranam gateway, Warangal Fort & Thousand Pillar Temple",
+    emoji: "🛕",
+    labelAlign: "right",
+  },
+  {
     id: "goa",
     name: "Goa",
     stateOrRegion: "Goa",
@@ -648,13 +676,13 @@ export const TravelMap: React.FC = () => {
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 font-mono text-xs mb-3">
             <Compass className="h-3.5 w-3.5 text-cyan-400 animate-spin" style={{ animationDuration: "12s" }} />
-            <span>Classic Explorer Atlas • 37 Destinations Mapped</span>
+            <span>Classic Explorer Atlas • {destinations.length} Destinations Mapped</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Footprints &amp; <span className="text-gradient-funky">Trails</span>
           </h2>
           <p className="text-zinc-400 text-sm mt-1 max-w-xl">
-            From the misty ridges of Sikkim, sacred river ghats of Varanasi, and coastal cliffs of Gokarna &amp; Kerala to the vibrant lantern streets of Vietnam.
+            From the misty ridges of Sikkim, sacred river ghats of Varanasi, and coastal cliffs of Gokarna &amp; Kerala to the historic forts of Hyderabad &amp; lantern streets of Vietnam.
           </p>
         </div>
 
@@ -662,25 +690,23 @@ export const TravelMap: React.FC = () => {
         <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-[#060a14] border border-white/10 self-start md:self-auto">
           <button
             onClick={() => handleTabChange("india")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${
-              activeTab === "india"
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${activeTab === "india"
                 ? "bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-300 border border-amber-500/40 shadow-lg shadow-amber-950/40"
                 : "text-zinc-400 hover:text-white"
-            }`}
+              }`}
           >
             <span>🇮🇳 Classic India Map</span>
-            <span className="px-1.5 py-0.2 rounded-full bg-white/10 text-[10px] font-mono">33</span>
+            <span className="px-1.5 py-0.2 rounded-full bg-white/10 text-[10px] font-mono">{indiaDests.length}</span>
           </button>
           <button
             onClick={() => handleTabChange("vietnam")}
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${
-              activeTab === "vietnam"
+            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${activeTab === "vietnam"
                 ? "bg-gradient-to-r from-pink-500/20 to-rose-500/20 text-pink-300 border border-pink-500/40 shadow-lg shadow-pink-950/40"
                 : "text-zinc-400 hover:text-white"
-            }`}
+              }`}
           >
             <span>🇻🇳 Vietnam Odyssey</span>
-            <span className="px-1.5 py-0.2 rounded-full bg-white/10 text-[10px] font-mono">4</span>
+            <span className="px-1.5 py-0.2 rounded-full bg-white/10 text-[10px] font-mono">{vietnamDests.length}</span>
           </button>
         </div>
       </div>
@@ -693,53 +719,48 @@ export const TravelMap: React.FC = () => {
             <>
               <button
                 onClick={() => setCategoryFilter("all")}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all ${
-                  categoryFilter === "all"
+                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all ${categoryFilter === "all"
                     ? "bg-cyan-500/20 border border-cyan-400 text-cyan-300"
                     : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white"
-                }`}
+                  }`}
               >
-                All (33)
+                All ({indiaDests.length})
               </button>
               <button
                 onClick={() => setCategoryFilter("mountains")}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${
-                  categoryFilter === "mountains"
+                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${categoryFilter === "mountains"
                     ? "bg-amber-500/20 border border-amber-400 text-amber-300"
                     : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white"
-                }`}
+                  }`}
               >
-                <Mountain className="h-3 w-3 text-amber-400" /> Mountains (9)
+                <Mountain className="h-3 w-3 text-amber-400" /> Mountains ({indiaDests.filter((d) => d.category === "mountains").length})
               </button>
               <button
                 onClick={() => setCategoryFilter("coastal")}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${
-                  categoryFilter === "coastal"
+                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${categoryFilter === "coastal"
                     ? "bg-blue-500/20 border border-blue-400 text-blue-300"
                     : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white"
-                }`}
+                  }`}
               >
-                <Waves className="h-3 w-3 text-blue-400" /> Coastal &amp; Sea (8)
+                <Waves className="h-3 w-3 text-blue-400" /> Coastal &amp; Sea ({indiaDests.filter((d) => d.category === "coastal").length})
               </button>
               <button
                 onClick={() => setCategoryFilter("hills")}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${
-                  categoryFilter === "hills"
+                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${categoryFilter === "hills"
                     ? "bg-emerald-500/20 border border-emerald-400 text-emerald-300"
                     : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white"
-                }`}
+                  }`}
               >
-                <Coffee className="h-3 w-3 text-emerald-400" /> Ghats &amp; Hills (4)
+                <Coffee className="h-3 w-3 text-emerald-400" /> Ghats &amp; Hills ({indiaDests.filter((d) => d.category === "hills").length})
               </button>
               <button
                 onClick={() => setCategoryFilter("heritage")}
-                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${
-                  categoryFilter === "heritage"
+                className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all flex items-center gap-1.5 ${categoryFilter === "heritage"
                     ? "bg-purple-500/20 border border-purple-400 text-purple-300"
                     : "bg-white/5 border border-white/10 text-zinc-400 hover:text-white"
-                }`}
+                  }`}
               >
-                <Sparkles className="h-3 w-3 text-purple-400" /> Metros &amp; Heritage (12)
+                <Sparkles className="h-3 w-3 text-purple-400" /> Metros &amp; Heritage ({indiaDests.filter((d) => d.category === "heritage").length})
               </button>
             </>
           ) : (
@@ -751,7 +772,7 @@ export const TravelMap: React.FC = () => {
         </div>
 
         {/* Autoplay Trail Button */}
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <Button
             size="sm"
             onClick={() => setIsPlaying(!isPlaying)}
@@ -782,7 +803,7 @@ export const TravelMap: React.FC = () => {
               <RotateCcw className="h-3.5 w-3.5" />
             </button>
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* Main Grid: Interactive Classic SVG Map + Dispatch Inspector */}
@@ -1144,11 +1165,10 @@ export const TravelMap: React.FC = () => {
                   <button
                     key={dest.id}
                     onClick={() => handleSelect(dest)}
-                    className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all flex items-center gap-1.5 ${
-                      isSelected
+                    className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all flex items-center gap-1.5 ${isSelected
                         ? "bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/30 scale-105"
                         : "bg-white/5 border border-white/5 text-zinc-300 hover:bg-white/10 hover:border-cyan-500/30"
-                    }`}
+                      }`}
                   >
                     <span>{dest.emoji}</span>
                     <span>{dest.name}</span>
