@@ -88,7 +88,7 @@ const Index = () => {
       tapeColor: "washi-tape",
     },
     {
-      src: "/ujala_social_photos/image.png",
+      src: "/ujala_social_photos/IMG_2726.jpg",
       tag: "Wanderlust",
       location: "Scenic Outpost",
       caption: "Solo travels: soaking in golden hour 🌅",
